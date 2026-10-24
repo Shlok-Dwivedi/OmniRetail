@@ -1,0 +1,19 @@
+{
+  "source": "OpenExchangeRates & RBI API (Mocked Live Feed)",
+  "endpoint": "https://api.exchangerate-api.com/v4/latest/USD",
+  "fetch_timestamp": "2026-10-23T22:19:20.113170",
+  "base_currency": "USD",
+  "rates": {
+    "INR": 83.95,
+    "EUR": 0.92,
+    "GBP": 0.78,
+    "JPY": 154.2,
+    "CAD": 1.36
+  },
+  "macro_indicators_india": {
+    "cpi_inflation_rate_percent": 5.1,
+    "repo_rate_percent": 6.5,
+    "gdp_growth_forecast_percent": 7.2,
+    "e_commerce_market_cagr_percent": 18.4
+  }
+}

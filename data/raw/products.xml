@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ProductCatalog version="2.0" generated="2026-10-23T22:19:19.678716">
+  <Product id="PRD001">
+    <Name>Aura Wireless Headphones</Name>
+    <Category>Electronics</Category>
+    <SubCategory>Audio</SubCategory>
+    <UnitCostINR>2200.0</UnitCostINR>
+    <UnitPriceINR>4499.0</UnitPriceINR>
+    <Supplier>SoundWave Ltd</Supplier>
+  </Product>
+  <Product id="PRD002">
+    <Name>BassPro Bluetooth Speaker</Name>
+    <Category>Electronics</Category>
+    <SubCategory>Audio</SubCategory>
+    <UnitCostINR>1500.0</UnitCostINR>
+    <UnitPriceINR>2999.0</UnitPriceINR>
+    <Supplier>SoundWave Ltd</Supplier>
+  </Product>
+  <Product id="PRD003">
+    <Name>PixelView 27-inch 4K Monitor</Name>
+    <Category>Electronics</Category>
+    <SubCategory>Displays</SubCategory>
+    <UnitCostINR>14500.0</UnitCostINR>
+    <UnitPriceINR>22999.0</UnitPriceINR>
+    <Supplier>TechVision Inc</Supplier>
+  </Product>
+  <Product id="PRD004">
+    <Name>NovaTech Mechanical Keyboard</Name>
+    <Category>Electronics</Category>
+    <SubCategory>Peripherals</SubCategory>
+    <UnitCostINR>1800.0</UnitCostINR>
+    <UnitPriceINR>3499.0</UnitPriceINR>
+    <Supplier>TechVision Inc</Supplier>
+  </Product>
+  <Product id="PRD005">
+    <Name>Precision Ergonomic Mouse</Name>
+    <Category>Electronics</Category>
+    <SubCategory>Peripherals</SubCategory>
+    <UnitCostINR>800.0</UnitCostINR>
+    <UnitPriceINR>1599.0</UnitPriceINR>
+    <Supplier>TechVision Inc</Supplier>
+  </Product>
+  <Product id="PRD006">
+    <Name>SmartLife Fitness Band v4</Name>
+    <Category>Electronics</Category>
+    <SubCategory>Wearables</SubCategory>
+    <UnitCostINR>1200.0</UnitCostINR>
+    <UnitPriceINR>2499.0</UnitPriceINR>
+    <Supplier>FitGear Global</Supplier>
+  </Product>
+  <Product id="PRD007">
+    <Name>Apex HD Smart Webcam</Name>
+    <Category>Electronics</Category>
+    <SubCategory>Peripherals</SubCategory>
+    <UnitCostINR>1400.0</UnitCostINR>
+    <UnitPriceINR>2799.0</UnitPriceINR>
+    <Supplier>TechVision Inc</Supplier>
+  </Product>
+  <Product id="PRD008">
+    <Name>ThunderBolt 65W GaN Charger</Name>
+    <Category>Electronics</Category>
+    <SubCategory>Accessories</SubCategory>
+    <UnitCostINR>650.0</UnitCostINR>
+    <UnitPriceINR>1499.0</UnitPriceINR>
+    <Supplier>VoltCharge</Supplier>
+  </Product>
+  <Product id="PRD009">
+    <Name>ErgoFlex High-Back Office Chair</Name>
+    <Category>Furniture</Category>
+    <SubCategory>Chairs</SubCategory>
+    <UnitCostINR>4800.0</UnitCostINR>
+    <UnitPriceINR>8999.0</UnitPriceINR>
+    <Supplier>ComfortSeats</Supplier>
+  </Product>
+  <Product id="PRD010">
+    <Name>Solid Oak Standing Desk</Name>
+    <Category>Furniture</Category>
+    <SubCategory>Desks</SubCategory>
+    <UnitCostINR>11000.0</UnitCostINR>
+    <UnitPriceINR>19999.0</UnitPriceINR>
+    <Supplier>CraftWood Designs</Supplier>
+  </Product>
+  <Product id="PRD011">
+    <Name>Nordic Minimalist Bookshelf</Name>
+    <Category>Furniture</Category>
+    <SubCategory>Storage</SubCategory>
+    <UnitCostINR>3200.0</UnitCostINR>
+    <UnitPriceINR>5999.0</UnitPriceINR>
+    <Supplier>CraftWood Designs</Supplier>
+  </Product>
+  <Product id="PRD012">
+    <Name>Memory Foam Lumbar Cushion</Name>
+    <Category>Furniture</Category>
+    <SubCategory>Accessories</SubCategory>
+    <UnitCostINR>450.0</UnitCostINR>
+    <UnitPriceINR>1199.0</UnitPriceINR>
+    <Supplier>ComfortSeats</Supplier>
+  </Product>
+  <Product id="PRD013">
+    <Name>Adjustable Dual Monitor Arm</Name>
+    <Category>Furniture</Category>
+    <SubCategory>Accessories</SubCategory>
+    <UnitCostINR>1200.0</UnitCostINR>
+    <UnitPriceINR>2499.0</UnitPriceINR>
+    <Supplier>ComfortSeats</Supplier>
+  </Product>
+  <Product id="PRD014">
+    <Name>Premium Leatherette Executive Notebook</Name>
+    <Category>Office Supplies</Category>
+    <SubCategory>Stationery</SubCategory>
+    <UnitCostINR>220.0</UnitCostINR>
+    <UnitPriceINR>599.0</UnitPriceINR>
+    <Supplier>PaperCraft</Supplier>
+  </Product>
+  <Product id="PRD015">
+    <Name>Matte Brass Ballpoint Pen Set</Name>
+    <Category>Office Supplies</Category>
+    <SubCategory>Stationery</SubCategory>
+    <UnitCostINR>300.0</UnitCostINR>
+    <UnitPriceINR>799.0</UnitPriceINR>
+    <Supplier>PaperCraft</Supplier>
+  </Product>
+  <Product id="PRD016">
+    <Name>Desk Organizer Wire Mesh Caddy</Name>
+    <Category>Office Supplies</Category>
+    <SubCategory>Organization</SubCategory>
+    <UnitCostINR>250.0</UnitCostINR>
+    <UnitPriceINR>649.0</UnitPriceINR>
+    <Supplier>WorkClean Co</Supplier>
+  </Product>
+  <Product id="PRD017">
+    <Name>Heavy Duty Desktop Shredder</Name>
+    <Category>Office Supplies</Category>
+    <SubCategory>Equipment</SubCategory>
+    <UnitCostINR>2400.0</UnitCostINR>
+    <UnitPriceINR>4499.0</UnitPriceINR>
+    <Supplier>WorkClean Co</Supplier>
+  </Product>
+  <Product id="PRD018">
+    <Name>Magnetic Dry-Erase Whiteboard 3x2</Name>
+    <Category>Office Supplies</Category>
+    <SubCategory>Presentation</SubCategory>
+    <UnitCostINR>950.0</UnitCostINR>
+    <UnitPriceINR>1899.0</UnitPriceINR>
+    <Supplier>PaperCraft</Supplier>
+  </Product>
+  <Product id="PRD019">
+    <Name>Stainless Steel French Press 1L</Name>
+    <Category>Home &amp; Kitchen</Category>
+    <SubCategory>Coffee &amp; Tea</SubCategory>
+    <UnitCostINR>600.0</UnitCostINR>
+    <UnitPriceINR>1399.0</UnitPriceINR>
+    <Supplier>BrewMaster</Supplier>
+  </Product>
+  <Product id="PRD020">
+    <Name>Digital Touch Air Fryer 4.5L</Name>
+    <Category>Home &amp; Kitchen</Category>
+    <SubCategory>Appliances</SubCategory>
+    <UnitCostINR>3100.0</UnitCostINR>
+    <UnitPriceINR>5999.0</UnitPriceINR>
+    <Supplier>CuisineChef</Supplier>
+  </Product>
+  <Product id="PRD021">
+    <Name>Cold Brew Infusion Pitcher</Name>
+    <Category>Home &amp; Kitchen</Category>
+    <SubCategory>Coffee &amp; Tea</SubCategory>
+    <UnitCostINR>450.0</UnitCostINR>
+    <UnitPriceINR>1099.0</UnitPriceINR>
+    <Supplier>BrewMaster</Supplier>
+  </Product>
+  <Product id="PRD022">
+    <Name>Smart Temperature Control Kettle</Name>
+    <Category>Home &amp; Kitchen</Category>
+    <SubCategory>Appliances</SubCategory>
+    <UnitCostINR>1600.0</UnitCostINR>
+    <UnitPriceINR>3199.0</UnitPriceINR>
+    <Supplier>CuisineChef</Supplier>
+  </Product>
+  <Product id="PRD023">
+    <Name>Eco Bamboo Cutting Board Set</Name>
+    <Category>Home &amp; Kitchen</Category>
+    <SubCategory>Cookware</SubCategory>
+    <UnitCostINR>380.0</UnitCostINR>
+    <UnitPriceINR>899.0</UnitPriceINR>
+    <Supplier>EcoLiving</Supplier>
+  </Product>
+  <Product id="PRD024">
+    <Name>Waterproof Commuter Laptop Backpack</Name>
+    <Category>Fashion</Category>
+    <SubCategory>Bags</SubCategory>
+    <UnitCostINR>900.0</UnitCostINR>
+    <UnitPriceINR>2199.0</UnitPriceINR>
+    <Supplier>UrbanStyle</Supplier>
+  </Product>
+  <Product id="PRD025">
+    <Name>Anti-Blue Light Reading Glasses</Name>
+    <Category>Fashion</Category>
+    <SubCategory>Eyewear</SubCategory>
+    <UnitCostINR>350.0</UnitCostINR>
+    <UnitPriceINR>899.0</UnitPriceINR>
+    <Supplier>UrbanStyle</Supplier>
+  </Product>
+  <Product id="PRD026">
+    <Name>Classic Minimalist Chrono Watch</Name>
+    <Category>Fashion</Category>
+    <SubCategory>Watches</SubCategory>
+    <UnitCostINR>1600.0</UnitCostINR>
+    <UnitPriceINR>3499.0</UnitPriceINR>
+    <Supplier>Timeless Co</Supplier>
+  </Product>
+  <Product id="PRD027">
+    <Name>Merino Wool Blend Winter Scarf</Name>
+    <Category>Fashion</Category>
+    <SubCategory>Apparel</SubCategory>
+    <UnitCostINR>450.0</UnitCostINR>
+    <UnitPriceINR>1199.0</UnitPriceINR>
+    <Supplier>UrbanStyle</Supplier>
+  </Product>
+  <Product id="PRD028">
+    <Name>RFID Blocking Slim Leather Wallet</Name>
+    <Category>Fashion</Category>
+    <SubCategory>Accessories</SubCategory>
+    <UnitCostINR>400.0</UnitCostINR>
+    <UnitPriceINR>999.0</UnitPriceINR>
+    <Supplier>Timeless Co</Supplier>
+  </Product>
+</ProductCatalog>

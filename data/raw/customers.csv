@@ -1,0 +1,1001 @@
+CustomerID,Name,Email,Gender,Age,City,State,SignupDate,LoyaltyTier
+CUST0001,Arjun Nair,arjun.nair1@example.com,Female,22,Mumbai,Maharashtra,2025-01-29,Bronze
+CUST0002,Meera Kulkarni,meera.kulkarni2@example.com,Male,37,Bengaluru,Karnataka,2025-01-24,Bronze
+CUST0003,Simran Choudhury,simran.choudhury3@example.com,Female,36,Delhi,Delhi,2024-08-27,Bronze
+CUST0004,Ananya Sharma,ananya.sharma4@example.com,Male,44,Delhi,Delhi,2023-08-12,Silver
+CUST0005,Saurabh Reddy,saurabh.reddy5@example.com,Male,28,Mumbai,Maharashtra,2024-07-28,Bronze
+CUST0006,Tanvi Choudhury,tanvi.choudhury6@example.com,Female,28,Kolkata,West Bengal,2023-08-14,Bronze
+CUST0007,Abhishek Mehta,abhishek.mehta7@example.com,Male,18,Mumbai,Maharashtra,2025-02-16,Bronze
+CUST0008,Tanvi Khan,tanvi.khan8@example.com,Male,43,Chennai,Tamil Nadu,2023-10-12,Bronze
+CUST0009,Vivek Roy,vivek.roy9@example.com,Female,29,Delhi,Delhi,2023-04-05,Silver
+CUST0010,Priya Kaur,priya.kaur10@example.com,Female,26,Chennai,Tamil Nadu,2024-09-10,Bronze
+CUST0011,Ayesha Verma,ayesha.verma11@example.com,Male,27,Ahmedabad,Gujarat,2024-07-03,Silver
+CUST0012,Palak Malhotra,palak.malhotra12@example.com,Female,39,Delhi,Delhi,2024-07-19,Silver
+CUST0013,Nitin Reddy,nitin.reddy13@example.com,Male,35,Chennai,Tamil Nadu,2024-08-14,Silver
+CUST0014,Tanvi Patil,tanvi.patil14@example.com,Male,28,Mumbai,Maharashtra,2024-11-08,Bronze
+CUST0015,Dev Iyer,dev.iyer15@example.com,Male,27,Delhi,Delhi,2025-05-25,Bronze
+CUST0016,Ishita Nair,ishita.nair16@example.com,Female,43,Kolkata,West Bengal,2023-10-12,Bronze
+CUST0017,Arjun Kaur,arjun.kaur17@example.com,Female,23,Bengaluru,Karnataka,2024-01-15,Silver
+CUST0018,Vivek Mehta,vivek.mehta18@example.com,Male,32,Delhi,Delhi,2024-09-15,Silver
+CUST0019,Kritika Kulkarni,kritika.kulkarni19@example.com,Female,31,Bengaluru,Karnataka,2024-04-18,Bronze
+CUST0020,Karan Choudhury,karan.choudhury20@example.com,Female,37,Hyderabad,Telangana,2024-12-02,Silver
+CUST0021,Nitin Verma,nitin.verma21@example.com,Male,61,Hyderabad,Telangana,2025-04-21,Bronze
+CUST0022,Ayesha Roy,ayesha.roy22@example.com,Male,45,Kolkata,West Bengal,2023-10-02,Bronze
+CUST0023,Vivek Bose,vivek.bose23@example.com,Female,36,Chennai,Tamil Nadu,2023-08-06,Platinum
+CUST0024,Rahul Chopra,rahul.chopra24@example.com,Male,42,Bengaluru,Karnataka,2023-09-29,Gold
+CUST0025,Meera Choudhury,meera.choudhury25@example.com,Female,23,Jaipur,Rajasthan,2023-09-27,Bronze
+CUST0026,Manav Bose,manav.bose26@example.com,Male,18,Kolkata,West Bengal,2024-01-06,Bronze
+CUST0027,Aditya Deshmukh,aditya.deshmukh27@example.com,Male,20,Ahmedabad,Gujarat,2023-04-04,Gold
+CUST0028,Ishita Nair,ishita.nair28@example.com,Male,25,Bengaluru,Karnataka,2024-10-04,Silver
+CUST0029,Ayesha Khan,ayesha.khan29@example.com,Female,39,Lucknow,Uttar Pradesh,2023-03-07,Bronze
+CUST0030,Rahul Reddy,rahul.reddy30@example.com,Female,42,Ahmedabad,Gujarat,2024-06-25,Silver
+CUST0031,Kritika Sharma,kritika.sharma31@example.com,Female,31,Delhi,Delhi,2024-11-29,Gold
+CUST0032,Dev Roy,dev.roy32@example.com,Female,27,Delhi,Delhi,2023-10-28,Bronze
+CUST0033,Sneha Chopra,sneha.chopra33@example.com,Female,18,Mumbai,Maharashtra,2025-01-09,Gold
+CUST0034,Saurabh Joshi,saurabh.joshi34@example.com,Female,44,Jaipur,Rajasthan,2023-04-19,Bronze
+CUST0035,Nitin Deshmukh,nitin.deshmukh35@example.com,Male,45,Lucknow,Uttar Pradesh,2023-07-23,Bronze
+CUST0036,Divya Joshi,divya.joshi36@example.com,Male,25,Jaipur,Rajasthan,2025-03-08,Silver
+CUST0037,Nandini Roy,nandini.roy37@example.com,Male,23,Ahmedabad,Gujarat,2023-01-20,Gold
+CUST0038,Palak Kaur,palak.kaur38@example.com,Male,33,Pune,Maharashtra,2023-09-03,Silver
+CUST0039,Meera Bose,meera.bose39@example.com,Female,48,Delhi,Delhi,2023-03-29,Gold
+CUST0040,Nitin Patil,nitin.patil40@example.com,Male,37,Jaipur,Rajasthan,2025-02-23,Silver
+CUST0041,Aditya Gupta,aditya.gupta41@example.com,Female,30,Jaipur,Rajasthan,2023-06-19,Silver
+CUST0042,Saurabh Reddy,saurabh.reddy42@example.com,Male,33,Kolkata,West Bengal,2023-08-05,Bronze
+CUST0043,Tanvi Iyer,tanvi.iyer43@example.com,Female,19,Kolkata,West Bengal,2024-11-18,Bronze
+CUST0044,Aryan Deshmukh,aryan.deshmukh44@example.com,Male,44,Ahmedabad,Gujarat,2023-05-04,Silver
+CUST0045,Meera Patil,meera.patil45@example.com,Male,28,Chennai,Tamil Nadu,2023-01-22,Gold
+CUST0046,Abhishek Kulkarni,abhishek.kulkarni46@example.com,Male,19,Mumbai,Maharashtra,2023-03-14,Gold
+CUST0047,Meera Patil,meera.patil47@example.com,Female,31,Mumbai,Maharashtra,2025-05-30,Bronze
+CUST0048,Rohan Deshmukh,rohan.deshmukh48@example.com,Female,29,Hyderabad,Telangana,2023-10-13,Bronze
+CUST0049,Vivek Choudhury,vivek.choudhury49@example.com,Female,39,Bengaluru,Karnataka,2025-01-10,Gold
+CUST0050,Meera Gupta,meera.gupta50@example.com,Male,45,Kolkata,West Bengal,2023-07-14,Gold
+CUST0051,Priya Khan,priya.khan51@example.com,Female,47,Chennai,Tamil Nadu,2024-03-09,Gold
+CUST0052,Aryan Verma,aryan.verma52@example.com,Female,35,Delhi,Delhi,2023-03-04,Gold
+CUST0053,Rohit Roy,rohit.roy53@example.com,Male,31,Delhi,Delhi,2023-09-12,Bronze
+CUST0054,Vivek Choudhury,vivek.choudhury54@example.com,Female,30,Ahmedabad,Gujarat,2023-05-24,Bronze
+CUST0055,Sneha Mehta,sneha.mehta55@example.com,Male,18,Ahmedabad,Gujarat,2023-09-13,Gold
+CUST0056,Aryan Choudhury,aryan.choudhury56@example.com,Male,37,Delhi,Delhi,2023-02-21,Bronze
+CUST0057,Rohan Kulkarni,rohan.kulkarni57@example.com,Female,38,Bengaluru,Karnataka,2024-02-21,Bronze
+CUST0058,Kavya Rao,kavya.rao58@example.com,Male,32,Kolkata,West Bengal,2023-03-02,Bronze
+CUST0059,Rahul Sharma,rahul.sharma59@example.com,Female,24,Kolkata,West Bengal,2023-09-29,Silver
+CUST0060,Pooja Khan,pooja.khan60@example.com,Female,48,Jaipur,Rajasthan,2024-11-08,Platinum
+CUST0061,Aditya Rao,aditya.rao61@example.com,Male,33,Pune,Maharashtra,2023-08-11,Platinum
+CUST0062,Abhishek Choudhury,abhishek.choudhury62@example.com,Female,18,Mumbai,Maharashtra,2025-02-04,Bronze
+CUST0063,Ananya Verma,ananya.verma63@example.com,Male,35,Lucknow,Uttar Pradesh,2024-05-03,Bronze
+CUST0064,Ananya Deshmukh,ananya.deshmukh64@example.com,Male,29,Delhi,Delhi,2025-05-21,Silver
+CUST0065,Rohan Reddy,rohan.reddy65@example.com,Male,38,Delhi,Delhi,2024-11-22,Bronze
+CUST0066,Rahul Nair,rahul.nair66@example.com,Male,31,Lucknow,Uttar Pradesh,2023-09-10,Bronze
+CUST0067,Nandini Patil,nandini.patil67@example.com,Female,37,Kolkata,West Bengal,2024-11-04,Bronze
+CUST0068,Palak Mehta,palak.mehta68@example.com,Female,33,Hyderabad,Telangana,2024-11-16,Bronze
+CUST0069,Meera Mehta,meera.mehta69@example.com,Female,26,Kolkata,West Bengal,2023-05-15,Silver
+CUST0070,Aryan Roy,aryan.roy70@example.com,Female,41,Delhi,Delhi,2023-01-10,Silver
+CUST0071,Nandini Bose,nandini.bose71@example.com,Male,48,Delhi,Delhi,2023-03-17,Bronze
+CUST0072,Saurabh Mehta,saurabh.mehta72@example.com,Male,47,Bengaluru,Karnataka,2023-12-24,Silver
+CUST0073,Manav Kulkarni,manav.kulkarni73@example.com,Male,29,Chennai,Tamil Nadu,2023-10-19,Bronze
+CUST0074,Aryan Choudhury,aryan.choudhury74@example.com,Male,43,Pune,Maharashtra,2024-09-18,Bronze
+CUST0075,Simran Choudhury,simran.choudhury75@example.com,Male,51,Pune,Maharashtra,2024-11-10,Bronze
+CUST0076,Manav Singh,manav.singh76@example.com,Male,42,Pune,Maharashtra,2023-04-29,Bronze
+CUST0077,Rohit Choudhury,rohit.choudhury77@example.com,Female,40,Bengaluru,Karnataka,2023-10-06,Silver
+CUST0078,Nandini Rao,nandini.rao78@example.com,Female,21,Chennai,Tamil Nadu,2023-07-28,Bronze
+CUST0079,Saurabh Gupta,saurabh.gupta79@example.com,Male,40,Pune,Maharashtra,2025-05-16,Silver
+CUST0080,Rohan Khan,rohan.khan80@example.com,Male,32,Pune,Maharashtra,2023-02-15,Bronze
+CUST0081,Manish Singh,manish.singh81@example.com,Female,30,Pune,Maharashtra,2023-06-15,Bronze
+CUST0082,Kritika Khan,kritika.khan82@example.com,Male,39,Jaipur,Rajasthan,2023-01-10,Silver
+CUST0083,Rohan Singh,rohan.singh83@example.com,Female,47,Jaipur,Rajasthan,2023-02-06,Gold
+CUST0084,Abhishek Choudhury,abhishek.choudhury84@example.com,Male,59,Bengaluru,Karnataka,2024-03-16,Bronze
+CUST0085,Ananya Iyer,ananya.iyer85@example.com,Male,19,Chennai,Tamil Nadu,2025-03-26,Bronze
+CUST0086,Manav Kaur,manav.kaur86@example.com,Male,45,Hyderabad,Telangana,2024-11-29,Bronze
+CUST0087,Simran Nair,simran.nair87@example.com,Female,40,Chennai,Tamil Nadu,2025-03-09,Silver
+CUST0088,Nandini Singh,nandini.singh88@example.com,Male,46,Hyderabad,Telangana,2025-06-04,Bronze
+CUST0089,Ayesha Joshi,ayesha.joshi89@example.com,Male,36,Kolkata,West Bengal,2023-01-26,Bronze
+CUST0090,Rohit Roy,rohit.roy90@example.com,Male,42,Kolkata,West Bengal,2025-04-01,Bronze
+CUST0091,Karan Joshi,karan.joshi91@example.com,Male,35,Delhi,Delhi,2024-01-27,Bronze
+CUST0092,Ishita Gupta,ishita.gupta92@example.com,Female,21,Hyderabad,Telangana,2023-07-24,Silver
+CUST0093,Divya Iyer,divya.iyer93@example.com,Male,41,Hyderabad,Telangana,2023-08-17,Silver
+CUST0094,Simran Rao,simran.rao94@example.com,Female,24,Kolkata,West Bengal,2023-12-03,Bronze
+CUST0095,Ishita Patil,ishita.patil95@example.com,Female,41,Pune,Maharashtra,2023-12-26,Bronze
+CUST0096,Simran Choudhury,simran.choudhury96@example.com,Male,46,Chennai,Tamil Nadu,2023-01-29,Gold
+CUST0097,Manav Mehta,manav.mehta97@example.com,Female,25,Bengaluru,Karnataka,2024-08-17,Silver
+CUST0098,Ananya Nair,ananya.nair98@example.com,Female,35,Lucknow,Uttar Pradesh,2024-03-20,Bronze
+CUST0099,Rohit Roy,rohit.roy0@example.com,Male,42,Kolkata,West Bengal,2024-09-12,Bronze
+CUST0100,Rahul Bose,rahul.bose1@example.com,Male,31,Hyderabad,Telangana,2023-09-18,Silver
+CUST0101,Tanvi Khan,tanvi.khan2@example.com,Male,61,Mumbai,Maharashtra,2024-06-16,Gold
+CUST0102,Divya Khan,divya.khan3@example.com,Female,34,Delhi,Delhi,2024-11-11,Silver
+CUST0103,Nandini Roy,nandini.roy4@example.com,Female,24,Delhi,Delhi,2025-01-07,Bronze
+CUST0104,Saurabh Iyer,saurabh.iyer5@example.com,Female,43,Kolkata,West Bengal,2023-12-01,Bronze
+CUST0105,Tanvi Iyer,tanvi.iyer6@example.com,Male,32,Jaipur,Rajasthan,2023-05-11,Silver
+CUST0106,Neha Malhotra,neha.malhotra7@example.com,Female,41,Bengaluru,Karnataka,2024-09-22,Platinum
+CUST0107,Rahul Choudhury,rahul.choudhury8@example.com,Female,29,Mumbai,Maharashtra,2023-11-08,Platinum
+CUST0108,Vivek Khan,vivek.khan9@example.com,Female,41,Lucknow,Uttar Pradesh,2024-09-13,Bronze
+CUST0109,Aryan Chopra,aryan.chopra10@example.com,Male,24,Ahmedabad,Gujarat,2024-11-22,Gold
+CUST0110,Saurabh Gupta,saurabh.gupta11@example.com,Male,28,Bengaluru,Karnataka,2024-11-05,Silver
+CUST0111,Pooja Deshmukh,pooja.deshmukh12@example.com,Male,40,Lucknow,Uttar Pradesh,2023-12-10,Platinum
+CUST0112,Nitin Kulkarni,nitin.kulkarni13@example.com,Male,51,Pune,Maharashtra,2023-08-19,Bronze
+CUST0113,Aditya Sharma,aditya.sharma14@example.com,Female,44,Mumbai,Maharashtra,2023-09-08,Silver
+CUST0114,Nandini Patil,nandini.patil15@example.com,Male,34,Ahmedabad,Gujarat,2024-02-29,Silver
+CUST0115,Tanvi Malhotra,tanvi.malhotra16@example.com,Male,24,Ahmedabad,Gujarat,2024-02-14,Silver
+CUST0116,Aditya Sharma,aditya.sharma17@example.com,Female,47,Delhi,Delhi,2025-03-08,Bronze
+CUST0117,Meera Joshi,meera.joshi18@example.com,Male,37,Jaipur,Rajasthan,2024-04-20,Gold
+CUST0118,Kritika Kulkarni,kritika.kulkarni19@example.com,Male,36,Delhi,Delhi,2024-04-12,Gold
+CUST0119,Ayesha Chopra,ayesha.chopra20@example.com,Female,48,Jaipur,Rajasthan,2024-07-26,Silver
+CUST0120,Dev Chopra,dev.chopra21@example.com,Female,34,Lucknow,Uttar Pradesh,2025-04-14,Silver
+CUST0121,Nitin Choudhury,nitin.choudhury22@example.com,Female,36,Ahmedabad,Gujarat,2023-06-12,Silver
+CUST0122,Aryan Mehta,aryan.mehta23@example.com,Female,35,Hyderabad,Telangana,2025-05-10,Bronze
+CUST0123,Dev Deshmukh,dev.deshmukh24@example.com,Male,35,Ahmedabad,Gujarat,2024-10-03,Bronze
+CUST0124,Karan Chopra,karan.chopra25@example.com,Female,25,Delhi,Delhi,2024-12-31,Bronze
+CUST0125,Meera Mehta,meera.mehta26@example.com,Male,18,Chennai,Tamil Nadu,2023-11-24,Silver
+CUST0126,Aditya Singh,aditya.singh27@example.com,Male,37,Hyderabad,Telangana,2024-01-28,Silver
+CUST0127,Tanvi Rao,tanvi.rao28@example.com,Female,25,Delhi,Delhi,2024-02-29,Bronze
+CUST0128,Manish Choudhury,manish.choudhury29@example.com,Male,30,Ahmedabad,Gujarat,2024-03-01,Silver
+CUST0129,Vivek Khan,vivek.khan30@example.com,Male,39,Kolkata,West Bengal,2025-02-27,Gold
+CUST0130,Ishita Bose,ishita.bose31@example.com,Male,21,Kolkata,West Bengal,2024-05-03,Bronze
+CUST0131,Divya Iyer,divya.iyer32@example.com,Female,57,Kolkata,West Bengal,2025-05-23,Bronze
+CUST0132,Kritika Choudhury,kritika.choudhury33@example.com,Female,52,Lucknow,Uttar Pradesh,2023-08-14,Silver
+CUST0133,Meera Mehta,meera.mehta34@example.com,Male,34,Kolkata,West Bengal,2024-05-12,Silver
+CUST0134,Rahul Roy,rahul.roy35@example.com,Male,38,Kolkata,West Bengal,2025-01-11,Bronze
+CUST0135,Nitin Chopra,nitin.chopra36@example.com,Male,29,Bengaluru,Karnataka,2024-09-29,Gold
+CUST0136,Palak Malhotra,palak.malhotra37@example.com,Male,18,Lucknow,Uttar Pradesh,2024-07-31,Bronze
+CUST0137,Rohan Khan,rohan.khan38@example.com,Female,26,Bengaluru,Karnataka,2025-06-06,Bronze
+CUST0138,Sneha Verma,sneha.verma39@example.com,Female,50,Pune,Maharashtra,2024-01-24,Bronze
+CUST0139,Vivek Chopra,vivek.chopra40@example.com,Female,37,Chennai,Tamil Nadu,2023-12-12,Bronze
+CUST0140,Karan Khan,karan.khan41@example.com,Male,18,Pune,Maharashtra,2025-05-04,Silver
+CUST0141,Kavya Sharma,kavya.sharma42@example.com,Female,37,Jaipur,Rajasthan,2023-02-23,Silver
+CUST0142,Meera Patil,meera.patil43@example.com,Male,50,Mumbai,Maharashtra,2025-02-11,Silver
+CUST0143,Meera Rao,meera.rao44@example.com,Male,26,Mumbai,Maharashtra,2024-09-28,Bronze
+CUST0144,Meera Singh,meera.singh45@example.com,Male,21,Ahmedabad,Gujarat,2024-11-16,Gold
+CUST0145,Abhishek Rao,abhishek.rao46@example.com,Female,31,Ahmedabad,Gujarat,2024-12-17,Bronze
+CUST0146,Dev Kaur,dev.kaur47@example.com,Male,52,Bengaluru,Karnataka,2024-09-12,Bronze
+CUST0147,Dev Joshi,dev.joshi48@example.com,Male,21,Pune,Maharashtra,2023-04-21,Silver
+CUST0148,Palak Iyer,palak.iyer49@example.com,Female,32,Lucknow,Uttar Pradesh,2024-11-24,Bronze
+CUST0149,Rahul Rao,rahul.rao50@example.com,Male,49,Delhi,Delhi,2024-08-29,Bronze
+CUST0150,Priya Iyer,priya.iyer51@example.com,Male,47,Lucknow,Uttar Pradesh,2025-04-04,Bronze
+CUST0151,Ayesha Bose,ayesha.bose52@example.com,Female,34,Mumbai,Maharashtra,2023-12-22,Bronze
+CUST0152,Simran Kaur,simran.kaur53@example.com,Female,57,Delhi,Delhi,2024-06-02,Gold
+CUST0153,Aarav Khan,aarav.khan54@example.com,Female,31,Ahmedabad,Gujarat,2023-04-19,Silver
+CUST0154,Divya Chopra,divya.chopra55@example.com,Male,34,Bengaluru,Karnataka,2024-03-21,Silver
+CUST0155,Rohit Deshmukh,rohit.deshmukh56@example.com,Female,18,Pune,Maharashtra,2024-09-22,Platinum
+CUST0156,Aryan Khan,aryan.khan57@example.com,Female,46,Lucknow,Uttar Pradesh,2023-10-02,Silver
+CUST0157,Ishita Kulkarni,ishita.kulkarni58@example.com,Female,40,Delhi,Delhi,2023-10-13,Silver
+CUST0158,Meera Chopra,meera.chopra59@example.com,Female,34,Lucknow,Uttar Pradesh,2024-09-16,Bronze
+CUST0159,Manish Sharma,manish.sharma60@example.com,Female,29,Ahmedabad,Gujarat,2025-05-21,Platinum
+CUST0160,Sneha Gupta,sneha.gupta61@example.com,Female,36,Hyderabad,Telangana,2023-12-30,Bronze
+CUST0161,Manish Mehta,manish.mehta62@example.com,Female,27,Lucknow,Uttar Pradesh,2024-12-19,Gold
+CUST0162,Kritika Sharma,kritika.sharma63@example.com,Male,30,Jaipur,Rajasthan,2023-07-15,Silver
+CUST0163,Meera Khan,meera.khan64@example.com,Male,37,Ahmedabad,Gujarat,2024-07-22,Silver
+CUST0164,Tanvi Gupta,tanvi.gupta65@example.com,Male,39,Ahmedabad,Gujarat,2024-04-03,Gold
+CUST0165,Rohan Iyer,rohan.iyer66@example.com,Male,39,Hyderabad,Telangana,2024-02-19,Bronze
+CUST0166,Pooja Bose,pooja.bose67@example.com,Female,26,Chennai,Tamil Nadu,2024-04-29,Gold
+CUST0167,Neha Choudhury,neha.choudhury68@example.com,Female,18,Chennai,Tamil Nadu,2023-12-27,Platinum
+CUST0168,Karan Iyer,karan.iyer69@example.com,Male,21,Pune,Maharashtra,2023-08-25,Gold
+CUST0169,Rohit Rao,rohit.rao70@example.com,Male,49,Chennai,Tamil Nadu,2023-05-03,Bronze
+CUST0170,Vivek Rao,vivek.rao71@example.com,Female,29,Ahmedabad,Gujarat,2023-10-11,Gold
+CUST0171,Priya Rao,priya.rao72@example.com,Female,34,Pune,Maharashtra,2023-08-21,Bronze
+CUST0172,Sneha Iyer,sneha.iyer73@example.com,Male,43,Mumbai,Maharashtra,2024-12-26,Gold
+CUST0173,Karan Verma,karan.verma74@example.com,Female,31,Mumbai,Maharashtra,2024-07-20,Bronze
+CUST0174,Tanvi Singh,tanvi.singh75@example.com,Male,42,Ahmedabad,Gujarat,2023-04-16,Bronze
+CUST0175,Abhishek Iyer,abhishek.iyer76@example.com,Female,31,Ahmedabad,Gujarat,2024-05-05,Gold
+CUST0176,Manish Joshi,manish.joshi77@example.com,Female,27,Mumbai,Maharashtra,2023-09-16,Platinum
+CUST0177,Priya Patil,priya.patil78@example.com,Male,53,Kolkata,West Bengal,2024-05-18,Platinum
+CUST0178,Abhishek Verma,abhishek.verma79@example.com,Female,44,Bengaluru,Karnataka,2023-06-02,Bronze
+CUST0179,Rohan Kulkarni,rohan.kulkarni80@example.com,Female,46,Delhi,Delhi,2024-07-25,Bronze
+CUST0180,Nandini Reddy,nandini.reddy81@example.com,Female,22,Lucknow,Uttar Pradesh,2023-08-20,Gold
+CUST0181,Aryan Chopra,aryan.chopra82@example.com,Female,27,Pune,Maharashtra,2025-05-30,Gold
+CUST0182,Pooja Bose,pooja.bose83@example.com,Male,33,Lucknow,Uttar Pradesh,2023-03-03,Silver
+CUST0183,Dev Rao,dev.rao84@example.com,Male,30,Hyderabad,Telangana,2023-09-28,Bronze
+CUST0184,Sneha Kulkarni,sneha.kulkarni85@example.com,Male,42,Bengaluru,Karnataka,2024-07-19,Bronze
+CUST0185,Sneha Sharma,sneha.sharma86@example.com,Female,40,Kolkata,West Bengal,2024-04-06,Bronze
+CUST0186,Pooja Verma,pooja.verma87@example.com,Female,47,Hyderabad,Telangana,2023-10-23,Bronze
+CUST0187,Tanvi Chopra,tanvi.chopra88@example.com,Male,29,Delhi,Delhi,2024-12-04,Bronze
+CUST0188,Palak Mehta,palak.mehta89@example.com,Male,36,Lucknow,Uttar Pradesh,2024-11-08,Gold
+CUST0189,Neha Nair,neha.nair90@example.com,Male,45,Jaipur,Rajasthan,2023-08-19,Silver
+CUST0190,Palak Mehta,palak.mehta91@example.com,Male,29,Bengaluru,Karnataka,2023-03-15,Platinum
+CUST0191,Sneha Iyer,sneha.iyer92@example.com,Female,27,Lucknow,Uttar Pradesh,2025-02-05,Platinum
+CUST0192,Aryan Nair,aryan.nair93@example.com,Female,47,Ahmedabad,Gujarat,2024-12-06,Bronze
+CUST0193,Tanvi Malhotra,tanvi.malhotra94@example.com,Female,18,Pune,Maharashtra,2024-05-27,Gold
+CUST0194,Aryan Patil,aryan.patil95@example.com,Female,49,Lucknow,Uttar Pradesh,2023-02-10,Gold
+CUST0195,Rohit Roy,rohit.roy96@example.com,Male,30,Lucknow,Uttar Pradesh,2023-09-14,Bronze
+CUST0196,Rohan Kulkarni,rohan.kulkarni97@example.com,Male,33,Lucknow,Uttar Pradesh,2024-08-24,Silver
+CUST0197,Dev Mehta,dev.mehta98@example.com,Male,46,Lucknow,Uttar Pradesh,2023-02-11,Bronze
+CUST0198,Kavya Deshmukh,kavya.deshmukh0@example.com,Male,41,Ahmedabad,Gujarat,2023-10-12,Silver
+CUST0199,Abhishek Khan,abhishek.khan1@example.com,Female,19,Ahmedabad,Gujarat,2023-04-04,Platinum
+CUST0200,Divya Khan,divya.khan2@example.com,Male,25,Chennai,Tamil Nadu,2023-11-25,Gold
+CUST0201,Ishita Joshi,ishita.joshi3@example.com,Female,34,Chennai,Tamil Nadu,2024-02-26,Bronze
+CUST0202,Pooja Malhotra,pooja.malhotra4@example.com,Female,43,Jaipur,Rajasthan,2023-02-07,Platinum
+CUST0203,Rohan Roy,rohan.roy5@example.com,Male,38,Pune,Maharashtra,2023-11-28,Bronze
+CUST0204,Dev Malhotra,dev.malhotra6@example.com,Male,34,Jaipur,Rajasthan,2025-04-24,Silver
+CUST0205,Simran Choudhury,simran.choudhury7@example.com,Male,29,Ahmedabad,Gujarat,2024-02-28,Silver
+CUST0206,Vivek Deshmukh,vivek.deshmukh8@example.com,Female,52,Chennai,Tamil Nadu,2024-09-29,Silver
+CUST0207,Arjun Chopra,arjun.chopra9@example.com,Female,32,Mumbai,Maharashtra,2023-07-28,Silver
+CUST0208,Kritika Singh,kritika.singh10@example.com,Female,43,Pune,Maharashtra,2024-03-24,Silver
+CUST0209,Priya Sharma,priya.sharma11@example.com,Male,32,Lucknow,Uttar Pradesh,2025-03-29,Bronze
+CUST0210,Tanvi Joshi,tanvi.joshi12@example.com,Male,20,Pune,Maharashtra,2024-07-18,Bronze
+CUST0211,Kritika Khan,kritika.khan13@example.com,Male,18,Delhi,Delhi,2023-08-19,Silver
+CUST0212,Aryan Nair,aryan.nair14@example.com,Female,37,Bengaluru,Karnataka,2024-05-25,Gold
+CUST0213,Saurabh Mehta,saurabh.mehta15@example.com,Female,41,Kolkata,West Bengal,2025-05-04,Silver
+CUST0214,Kavya Kulkarni,kavya.kulkarni16@example.com,Male,48,Ahmedabad,Gujarat,2024-07-18,Bronze
+CUST0215,Rahul Rao,rahul.rao17@example.com,Male,33,Lucknow,Uttar Pradesh,2024-06-04,Platinum
+CUST0216,Ishita Patil,ishita.patil18@example.com,Female,31,Pune,Maharashtra,2025-03-02,Gold
+CUST0217,Manish Deshmukh,manish.deshmukh19@example.com,Male,36,Pune,Maharashtra,2025-04-20,Platinum
+CUST0218,Pooja Iyer,pooja.iyer20@example.com,Female,23,Lucknow,Uttar Pradesh,2024-08-16,Bronze
+CUST0219,Ishita Singh,ishita.singh21@example.com,Female,36,Ahmedabad,Gujarat,2024-07-05,Platinum
+CUST0220,Divya Roy,divya.roy22@example.com,Female,36,Jaipur,Rajasthan,2025-02-20,Silver
+CUST0221,Aryan Roy,aryan.roy23@example.com,Male,32,Hyderabad,Telangana,2024-12-15,Bronze
+CUST0222,Abhishek Malhotra,abhishek.malhotra24@example.com,Female,33,Hyderabad,Telangana,2025-05-26,Gold
+CUST0223,Ananya Roy,ananya.roy25@example.com,Female,49,Ahmedabad,Gujarat,2024-12-23,Gold
+CUST0224,Rahul Singh,rahul.singh26@example.com,Male,37,Ahmedabad,Gujarat,2023-02-07,Platinum
+CUST0225,Saurabh Bose,saurabh.bose27@example.com,Male,30,Chennai,Tamil Nadu,2025-06-09,Gold
+CUST0226,Ishita Chopra,ishita.chopra28@example.com,Female,18,Delhi,Delhi,2024-06-22,Bronze
+CUST0227,Aarav Singh,aarav.singh29@example.com,Male,20,Kolkata,West Bengal,2025-06-10,Platinum
+CUST0228,Rohan Gupta,rohan.gupta30@example.com,Female,39,Pune,Maharashtra,2023-12-13,Silver
+CUST0229,Arjun Patil,arjun.patil31@example.com,Female,25,Chennai,Tamil Nadu,2025-05-22,Silver
+CUST0230,Manish Gupta,manish.gupta32@example.com,Male,30,Jaipur,Rajasthan,2023-02-06,Silver
+CUST0231,Meera Iyer,meera.iyer33@example.com,Male,35,Hyderabad,Telangana,2025-02-03,Silver
+CUST0232,Neha Nair,neha.nair34@example.com,Male,49,Delhi,Delhi,2024-03-30,Gold
+CUST0233,Tanvi Iyer,tanvi.iyer35@example.com,Female,44,Mumbai,Maharashtra,2023-02-17,Silver
+CUST0234,Ayesha Verma,ayesha.verma36@example.com,Female,35,Pune,Maharashtra,2024-01-03,Bronze
+CUST0235,Neha Singh,neha.singh37@example.com,Female,48,Hyderabad,Telangana,2024-06-27,Bronze
+CUST0236,Abhishek Joshi,abhishek.joshi38@example.com,Male,42,Bengaluru,Karnataka,2023-06-29,Bronze
+CUST0237,Nandini Malhotra,nandini.malhotra39@example.com,Male,18,Lucknow,Uttar Pradesh,2024-11-30,Bronze
+CUST0238,Kavya Bose,kavya.bose40@example.com,Female,48,Bengaluru,Karnataka,2023-08-26,Bronze
+CUST0239,Arjun Mehta,arjun.mehta41@example.com,Male,36,Ahmedabad,Gujarat,2023-09-19,Gold
+CUST0240,Manav Chopra,manav.chopra42@example.com,Male,18,Pune,Maharashtra,2024-11-24,Gold
+CUST0241,Rohan Chopra,rohan.chopra43@example.com,Female,43,Chennai,Tamil Nadu,2024-08-24,Bronze
+CUST0242,Arjun Khan,arjun.khan44@example.com,Female,37,Pune,Maharashtra,2024-04-12,Platinum
+CUST0243,Vivek Malhotra,vivek.malhotra45@example.com,Male,33,Ahmedabad,Gujarat,2023-04-20,Bronze
+CUST0244,Rahul Bose,rahul.bose46@example.com,Female,41,Chennai,Tamil Nadu,2024-08-11,Bronze
+CUST0245,Tanvi Iyer,tanvi.iyer47@example.com,Female,33,Mumbai,Maharashtra,2025-04-29,Silver
+CUST0246,Karan Sharma,karan.sharma48@example.com,Male,38,Lucknow,Uttar Pradesh,2025-06-04,Bronze
+CUST0247,Palak Reddy,palak.reddy49@example.com,Female,32,Ahmedabad,Gujarat,2025-05-02,Silver
+CUST0248,Dev Kulkarni,dev.kulkarni50@example.com,Female,33,Lucknow,Uttar Pradesh,2025-04-01,Bronze
+CUST0249,Meera Rao,meera.rao51@example.com,Male,22,Lucknow,Uttar Pradesh,2023-09-14,Bronze
+CUST0250,Arjun Nair,arjun.nair52@example.com,Female,38,Mumbai,Maharashtra,2023-11-13,Bronze
+CUST0251,Ananya Bose,ananya.bose53@example.com,Male,54,Chennai,Tamil Nadu,2025-01-19,Gold
+CUST0252,Rohan Iyer,rohan.iyer54@example.com,Female,30,Chennai,Tamil Nadu,2025-02-04,Bronze
+CUST0253,Sneha Rao,sneha.rao55@example.com,Female,25,Bengaluru,Karnataka,2025-03-16,Bronze
+CUST0254,Saurabh Deshmukh,saurabh.deshmukh56@example.com,Male,28,Pune,Maharashtra,2025-04-30,Bronze
+CUST0255,Karan Gupta,karan.gupta57@example.com,Female,19,Pune,Maharashtra,2025-02-03,Bronze
+CUST0256,Ayesha Nair,ayesha.nair58@example.com,Male,32,Ahmedabad,Gujarat,2023-03-19,Bronze
+CUST0257,Dev Kulkarni,dev.kulkarni59@example.com,Female,32,Kolkata,West Bengal,2025-05-16,Silver
+CUST0258,Rohan Malhotra,rohan.malhotra60@example.com,Male,34,Mumbai,Maharashtra,2023-09-28,Gold
+CUST0259,Aryan Kaur,aryan.kaur61@example.com,Female,42,Pune,Maharashtra,2024-08-21,Silver
+CUST0260,Nitin Kaur,nitin.kaur62@example.com,Male,27,Delhi,Delhi,2024-11-22,Silver
+CUST0261,Kavya Sharma,kavya.sharma63@example.com,Female,28,Lucknow,Uttar Pradesh,2024-07-28,Bronze
+CUST0262,Palak Reddy,palak.reddy64@example.com,Male,21,Hyderabad,Telangana,2024-10-25,Silver
+CUST0263,Arjun Chopra,arjun.chopra65@example.com,Female,27,Pune,Maharashtra,2024-10-26,Silver
+CUST0264,Priya Singh,priya.singh66@example.com,Female,18,Mumbai,Maharashtra,2023-02-08,Silver
+CUST0265,Kavya Nair,kavya.nair67@example.com,Male,42,Delhi,Delhi,2023-08-29,Bronze
+CUST0266,Rahul Chopra,rahul.chopra68@example.com,Female,24,Chennai,Tamil Nadu,2024-11-17,Gold
+CUST0267,Abhishek Singh,abhishek.singh69@example.com,Male,24,Kolkata,West Bengal,2024-11-01,Silver
+CUST0268,Nitin Gupta,nitin.gupta70@example.com,Female,34,Lucknow,Uttar Pradesh,2024-02-22,Bronze
+CUST0269,Ananya Kaur,ananya.kaur71@example.com,Female,25,Hyderabad,Telangana,2024-03-30,Silver
+CUST0270,Meera Kaur,meera.kaur72@example.com,Female,24,Delhi,Delhi,2024-12-03,Bronze
+CUST0271,Kritika Kaur,kritika.kaur73@example.com,Female,23,Mumbai,Maharashtra,2024-02-12,Bronze
+CUST0272,Vivek Nair,vivek.nair74@example.com,Male,27,Ahmedabad,Gujarat,2023-04-04,Bronze
+CUST0273,Arjun Reddy,arjun.reddy75@example.com,Female,36,Mumbai,Maharashtra,2023-02-21,Bronze
+CUST0274,Meera Singh,meera.singh76@example.com,Male,43,Lucknow,Uttar Pradesh,2023-07-30,Silver
+CUST0275,Nitin Choudhury,nitin.choudhury77@example.com,Male,25,Hyderabad,Telangana,2024-08-23,Gold
+CUST0276,Nitin Kulkarni,nitin.kulkarni78@example.com,Male,33,Chennai,Tamil Nadu,2025-03-03,Silver
+CUST0277,Ayesha Reddy,ayesha.reddy79@example.com,Male,29,Mumbai,Maharashtra,2023-10-11,Silver
+CUST0278,Aditya Choudhury,aditya.choudhury80@example.com,Male,49,Pune,Maharashtra,2025-03-28,Bronze
+CUST0279,Priya Sharma,priya.sharma81@example.com,Female,47,Bengaluru,Karnataka,2023-01-16,Bronze
+CUST0280,Ayesha Kulkarni,ayesha.kulkarni82@example.com,Male,20,Lucknow,Uttar Pradesh,2023-11-28,Silver
+CUST0281,Sneha Mehta,sneha.mehta83@example.com,Female,34,Mumbai,Maharashtra,2023-05-10,Bronze
+CUST0282,Saurabh Nair,saurabh.nair84@example.com,Female,35,Delhi,Delhi,2024-05-02,Bronze
+CUST0283,Dev Kaur,dev.kaur85@example.com,Male,29,Jaipur,Rajasthan,2024-08-30,Bronze
+CUST0284,Aryan Deshmukh,aryan.deshmukh86@example.com,Male,27,Hyderabad,Telangana,2024-09-21,Bronze
+CUST0285,Rohit Deshmukh,rohit.deshmukh87@example.com,Male,25,Pune,Maharashtra,2024-04-14,Bronze
+CUST0286,Ananya Gupta,ananya.gupta88@example.com,Male,28,Kolkata,West Bengal,2024-03-12,Gold
+CUST0287,Kavya Chopra,kavya.chopra89@example.com,Female,18,Delhi,Delhi,2023-03-24,Bronze
+CUST0288,Nandini Singh,nandini.singh90@example.com,Female,40,Delhi,Delhi,2023-05-10,Platinum
+CUST0289,Nandini Bose,nandini.bose91@example.com,Female,37,Jaipur,Rajasthan,2024-12-30,Bronze
+CUST0290,Rahul Reddy,rahul.reddy92@example.com,Female,33,Jaipur,Rajasthan,2023-10-29,Gold
+CUST0291,Saurabh Reddy,saurabh.reddy93@example.com,Male,26,Kolkata,West Bengal,2023-04-12,Gold
+CUST0292,Ishita Choudhury,ishita.choudhury94@example.com,Female,28,Hyderabad,Telangana,2024-03-16,Silver
+CUST0293,Manav Kulkarni,manav.kulkarni95@example.com,Female,54,Kolkata,West Bengal,2023-12-14,Gold
+CUST0294,Rahul Khan,rahul.khan96@example.com,Female,50,Delhi,Delhi,2023-11-17,Bronze
+CUST0295,Manish Mehta,manish.mehta97@example.com,Female,28,Chennai,Tamil Nadu,2023-06-06,Gold
+CUST0296,Rohan Patil,rohan.patil98@example.com,Female,23,Delhi,Delhi,2023-04-06,Bronze
+CUST0297,Priya Kaur,priya.kaur0@example.com,Male,29,Bengaluru,Karnataka,2024-07-23,Silver
+CUST0298,Abhishek Choudhury,abhishek.choudhury1@example.com,Male,30,Jaipur,Rajasthan,2023-12-04,Silver
+CUST0299,Neha Kaur,neha.kaur2@example.com,Male,22,Kolkata,West Bengal,2025-06-07,Bronze
+CUST0300,Pooja Reddy,pooja.reddy3@example.com,Male,36,Pune,Maharashtra,2023-12-27,Silver
+CUST0301,Abhishek Deshmukh,abhishek.deshmukh4@example.com,Female,32,Hyderabad,Telangana,2023-06-08,Silver
+CUST0302,Meera Nair,meera.nair5@example.com,Female,29,Chennai,Tamil Nadu,2025-05-15,Bronze
+CUST0303,Priya Mehta,priya.mehta6@example.com,Female,27,Lucknow,Uttar Pradesh,2023-08-20,Bronze
+CUST0304,Ishita Choudhury,ishita.choudhury7@example.com,Male,41,Lucknow,Uttar Pradesh,2024-09-20,Silver
+CUST0305,Nandini Mehta,nandini.mehta8@example.com,Female,26,Mumbai,Maharashtra,2023-07-04,Gold
+CUST0306,Tanvi Iyer,tanvi.iyer9@example.com,Male,58,Chennai,Tamil Nadu,2023-12-26,Bronze
+CUST0307,Sneha Singh,sneha.singh10@example.com,Female,35,Lucknow,Uttar Pradesh,2024-11-04,Bronze
+CUST0308,Rohan Singh,rohan.singh11@example.com,Male,34,Mumbai,Maharashtra,2023-04-04,Bronze
+CUST0309,Rahul Khan,rahul.khan12@example.com,Male,38,Ahmedabad,Gujarat,2023-12-16,Bronze
+CUST0310,Divya Iyer,divya.iyer13@example.com,Male,49,Chennai,Tamil Nadu,2025-03-06,Gold
+CUST0311,Manav Verma,manav.verma14@example.com,Male,28,Bengaluru,Karnataka,2023-06-11,Bronze
+CUST0312,Simran Patil,simran.patil15@example.com,Female,39,Pune,Maharashtra,2024-03-29,Bronze
+CUST0313,Kavya Reddy,kavya.reddy16@example.com,Female,39,Ahmedabad,Gujarat,2024-02-29,Bronze
+CUST0314,Vivek Deshmukh,vivek.deshmukh17@example.com,Female,44,Delhi,Delhi,2023-12-20,Silver
+CUST0315,Priya Iyer,priya.iyer18@example.com,Female,31,Lucknow,Uttar Pradesh,2024-05-13,Bronze
+CUST0316,Ananya Kulkarni,ananya.kulkarni19@example.com,Male,43,Kolkata,West Bengal,2024-09-05,Gold
+CUST0317,Aarav Rao,aarav.rao20@example.com,Male,27,Pune,Maharashtra,2023-08-05,Bronze
+CUST0318,Dev Mehta,dev.mehta21@example.com,Male,18,Pune,Maharashtra,2023-12-02,Bronze
+CUST0319,Aarav Gupta,aarav.gupta22@example.com,Male,18,Kolkata,West Bengal,2023-06-29,Silver
+CUST0320,Rahul Choudhury,rahul.choudhury23@example.com,Female,34,Hyderabad,Telangana,2024-05-27,Gold
+CUST0321,Rohan Malhotra,rohan.malhotra24@example.com,Male,42,Mumbai,Maharashtra,2024-03-22,Bronze
+CUST0322,Aryan Patil,aryan.patil25@example.com,Female,34,Chennai,Tamil Nadu,2024-08-12,Silver
+CUST0323,Abhishek Malhotra,abhishek.malhotra26@example.com,Male,35,Kolkata,West Bengal,2023-10-24,Bronze
+CUST0324,Rahul Sharma,rahul.sharma27@example.com,Female,39,Chennai,Tamil Nadu,2023-06-25,Bronze
+CUST0325,Nitin Kaur,nitin.kaur28@example.com,Male,39,Delhi,Delhi,2024-03-23,Bronze
+CUST0326,Meera Khan,meera.khan29@example.com,Male,46,Lucknow,Uttar Pradesh,2024-02-15,Silver
+CUST0327,Rahul Iyer,rahul.iyer30@example.com,Female,29,Chennai,Tamil Nadu,2023-08-15,Gold
+CUST0328,Dev Joshi,dev.joshi31@example.com,Male,38,Delhi,Delhi,2024-06-06,Bronze
+CUST0329,Saurabh Deshmukh,saurabh.deshmukh32@example.com,Female,49,Hyderabad,Telangana,2025-03-05,Bronze
+CUST0330,Divya Singh,divya.singh33@example.com,Male,38,Hyderabad,Telangana,2023-04-16,Gold
+CUST0331,Karan Rao,karan.rao34@example.com,Male,46,Bengaluru,Karnataka,2024-09-08,Bronze
+CUST0332,Dev Patil,dev.patil35@example.com,Female,29,Bengaluru,Karnataka,2025-03-02,Bronze
+CUST0333,Aryan Bose,aryan.bose36@example.com,Female,43,Lucknow,Uttar Pradesh,2024-04-04,Bronze
+CUST0334,Ishita Roy,ishita.roy37@example.com,Male,43,Bengaluru,Karnataka,2024-03-26,Silver
+CUST0335,Kavya Chopra,kavya.chopra38@example.com,Female,18,Pune,Maharashtra,2025-03-26,Silver
+CUST0336,Abhishek Verma,abhishek.verma39@example.com,Male,36,Chennai,Tamil Nadu,2024-06-03,Bronze
+CUST0337,Pooja Chopra,pooja.chopra40@example.com,Male,35,Ahmedabad,Gujarat,2023-02-08,Bronze
+CUST0338,Divya Iyer,divya.iyer41@example.com,Male,42,Delhi,Delhi,2024-10-22,Bronze
+CUST0339,Nandini Reddy,nandini.reddy42@example.com,Female,35,Jaipur,Rajasthan,2024-01-29,Silver
+CUST0340,Abhishek Choudhury,abhishek.choudhury43@example.com,Male,60,Mumbai,Maharashtra,2024-04-05,Silver
+CUST0341,Manish Reddy,manish.reddy44@example.com,Male,51,Ahmedabad,Gujarat,2024-05-28,Bronze
+CUST0342,Ananya Chopra,ananya.chopra45@example.com,Female,39,Delhi,Delhi,2025-04-10,Gold
+CUST0343,Tanvi Patil,tanvi.patil46@example.com,Male,36,Jaipur,Rajasthan,2024-10-23,Silver
+CUST0344,Ananya Kulkarni,ananya.kulkarni47@example.com,Male,22,Ahmedabad,Gujarat,2024-03-25,Silver
+CUST0345,Divya Kaur,divya.kaur48@example.com,Female,35,Pune,Maharashtra,2024-02-01,Bronze
+CUST0346,Dev Roy,dev.roy49@example.com,Female,35,Lucknow,Uttar Pradesh,2023-02-23,Gold
+CUST0347,Rohan Roy,rohan.roy50@example.com,Female,59,Delhi,Delhi,2024-07-25,Silver
+CUST0348,Pooja Mehta,pooja.mehta51@example.com,Male,39,Lucknow,Uttar Pradesh,2025-06-13,Bronze
+CUST0349,Manish Patil,manish.patil52@example.com,Male,44,Lucknow,Uttar Pradesh,2024-11-10,Bronze
+CUST0350,Palak Kaur,palak.kaur53@example.com,Female,28,Pune,Maharashtra,2024-11-02,Bronze
+CUST0351,Aditya Reddy,aditya.reddy54@example.com,Female,42,Delhi,Delhi,2023-11-14,Bronze
+CUST0352,Arjun Roy,arjun.roy55@example.com,Male,18,Bengaluru,Karnataka,2024-11-17,Gold
+CUST0353,Arjun Khan,arjun.khan56@example.com,Male,46,Jaipur,Rajasthan,2024-01-06,Bronze
+CUST0354,Divya Iyer,divya.iyer57@example.com,Female,25,Bengaluru,Karnataka,2023-08-08,Silver
+CUST0355,Dev Gupta,dev.gupta58@example.com,Male,22,Hyderabad,Telangana,2023-08-20,Bronze
+CUST0356,Aditya Patil,aditya.patil59@example.com,Male,32,Pune,Maharashtra,2025-05-14,Bronze
+CUST0357,Saurabh Choudhury,saurabh.choudhury60@example.com,Female,42,Jaipur,Rajasthan,2023-02-08,Silver
+CUST0358,Manav Reddy,manav.reddy61@example.com,Female,32,Bengaluru,Karnataka,2024-09-03,Bronze
+CUST0359,Aditya Joshi,aditya.joshi62@example.com,Male,23,Bengaluru,Karnataka,2025-05-01,Silver
+CUST0360,Rohit Chopra,rohit.chopra63@example.com,Female,39,Mumbai,Maharashtra,2024-02-25,Platinum
+CUST0361,Simran Kulkarni,simran.kulkarni64@example.com,Female,26,Ahmedabad,Gujarat,2024-09-17,Bronze
+CUST0362,Dev Chopra,dev.chopra65@example.com,Male,32,Hyderabad,Telangana,2024-06-30,Platinum
+CUST0363,Pooja Gupta,pooja.gupta66@example.com,Female,27,Hyderabad,Telangana,2024-01-12,Silver
+CUST0364,Aryan Iyer,aryan.iyer67@example.com,Female,35,Kolkata,West Bengal,2024-05-29,Silver
+CUST0365,Sneha Rao,sneha.rao68@example.com,Female,32,Lucknow,Uttar Pradesh,2023-05-22,Bronze
+CUST0366,Ananya Gupta,ananya.gupta69@example.com,Male,35,Chennai,Tamil Nadu,2024-07-21,Bronze
+CUST0367,Tanvi Deshmukh,tanvi.deshmukh70@example.com,Male,59,Delhi,Delhi,2023-10-19,Bronze
+CUST0368,Dev Joshi,dev.joshi71@example.com,Male,22,Pune,Maharashtra,2024-04-05,Bronze
+CUST0369,Nitin Khan,nitin.khan72@example.com,Female,47,Delhi,Delhi,2023-08-16,Gold
+CUST0370,Manav Kaur,manav.kaur73@example.com,Male,18,Mumbai,Maharashtra,2024-02-29,Bronze
+CUST0371,Rahul Deshmukh,rahul.deshmukh74@example.com,Female,22,Chennai,Tamil Nadu,2023-08-30,Bronze
+CUST0372,Rohan Kaur,rohan.kaur75@example.com,Female,36,Hyderabad,Telangana,2023-01-29,Bronze
+CUST0373,Palak Nair,palak.nair76@example.com,Male,32,Chennai,Tamil Nadu,2025-03-21,Gold
+CUST0374,Aditya Verma,aditya.verma77@example.com,Female,39,Pune,Maharashtra,2025-04-29,Bronze
+CUST0375,Tanvi Singh,tanvi.singh78@example.com,Male,30,Ahmedabad,Gujarat,2024-04-04,Silver
+CUST0376,Manav Patil,manav.patil79@example.com,Male,33,Mumbai,Maharashtra,2023-09-20,Bronze
+CUST0377,Nitin Singh,nitin.singh80@example.com,Female,33,Jaipur,Rajasthan,2025-01-14,Silver
+CUST0378,Priya Iyer,priya.iyer81@example.com,Male,34,Hyderabad,Telangana,2023-11-05,Bronze
+CUST0379,Ananya Kulkarni,ananya.kulkarni82@example.com,Female,34,Kolkata,West Bengal,2024-10-16,Bronze
+CUST0380,Rohan Nair,rohan.nair83@example.com,Male,32,Ahmedabad,Gujarat,2024-09-03,Bronze
+CUST0381,Arjun Deshmukh,arjun.deshmukh84@example.com,Male,30,Lucknow,Uttar Pradesh,2023-09-05,Silver
+CUST0382,Pooja Khan,pooja.khan85@example.com,Female,31,Mumbai,Maharashtra,2024-09-21,Bronze
+CUST0383,Meera Bose,meera.bose86@example.com,Male,36,Kolkata,West Bengal,2023-07-11,Silver
+CUST0384,Saurabh Kaur,saurabh.kaur87@example.com,Male,36,Delhi,Delhi,2024-06-22,Bronze
+CUST0385,Rahul Gupta,rahul.gupta88@example.com,Female,27,Mumbai,Maharashtra,2024-10-12,Silver
+CUST0386,Divya Mehta,divya.mehta89@example.com,Male,24,Mumbai,Maharashtra,2024-01-01,Gold
+CUST0387,Divya Kulkarni,divya.kulkarni90@example.com,Female,18,Delhi,Delhi,2025-03-01,Bronze
+CUST0388,Aditya Verma,aditya.verma91@example.com,Female,51,Chennai,Tamil Nadu,2024-07-13,Gold
+CUST0389,Nitin Joshi,nitin.joshi92@example.com,Female,21,Ahmedabad,Gujarat,2024-12-13,Gold
+CUST0390,Arjun Joshi,arjun.joshi93@example.com,Female,25,Bengaluru,Karnataka,2023-03-06,Bronze
+CUST0391,Ananya Iyer,ananya.iyer94@example.com,Male,41,Hyderabad,Telangana,2023-02-14,Silver
+CUST0392,Manav Verma,manav.verma95@example.com,Female,19,Chennai,Tamil Nadu,2023-11-14,Bronze
+CUST0393,Nitin Choudhury,nitin.choudhury96@example.com,Male,18,Ahmedabad,Gujarat,2023-09-17,Silver
+CUST0394,Dev Rao,dev.rao97@example.com,Male,28,Pune,Maharashtra,2024-01-01,Platinum
+CUST0395,Ishita Roy,ishita.roy98@example.com,Female,43,Pune,Maharashtra,2023-05-08,Gold
+CUST0396,Neha Malhotra,neha.malhotra0@example.com,Female,33,Ahmedabad,Gujarat,2024-01-31,Gold
+CUST0397,Sneha Gupta,sneha.gupta1@example.com,Female,55,Ahmedabad,Gujarat,2024-01-12,Bronze
+CUST0398,Ayesha Patil,ayesha.patil2@example.com,Female,40,Kolkata,West Bengal,2023-03-22,Bronze
+CUST0399,Nandini Joshi,nandini.joshi3@example.com,Female,21,Jaipur,Rajasthan,2023-10-28,Bronze
+CUST0400,Priya Patil,priya.patil4@example.com,Female,35,Chennai,Tamil Nadu,2024-11-07,Bronze
+CUST0401,Pooja Chopra,pooja.chopra5@example.com,Female,18,Lucknow,Uttar Pradesh,2025-01-04,Bronze
+CUST0402,Sneha Chopra,sneha.chopra6@example.com,Male,39,Chennai,Tamil Nadu,2024-04-02,Silver
+CUST0403,Rohit Kaur,rohit.kaur7@example.com,Female,29,Lucknow,Uttar Pradesh,2024-03-21,Silver
+CUST0404,Arjun Verma,arjun.verma8@example.com,Female,39,Delhi,Delhi,2024-11-18,Bronze
+CUST0405,Divya Deshmukh,divya.deshmukh9@example.com,Male,50,Bengaluru,Karnataka,2023-02-01,Bronze
+CUST0406,Ishita Reddy,ishita.reddy10@example.com,Male,49,Ahmedabad,Gujarat,2023-02-05,Silver
+CUST0407,Rohan Kulkarni,rohan.kulkarni11@example.com,Female,32,Chennai,Tamil Nadu,2024-01-06,Bronze
+CUST0408,Abhishek Verma,abhishek.verma12@example.com,Female,42,Lucknow,Uttar Pradesh,2023-06-07,Bronze
+CUST0409,Divya Kaur,divya.kaur13@example.com,Male,30,Ahmedabad,Gujarat,2025-02-20,Silver
+CUST0410,Abhishek Singh,abhishek.singh14@example.com,Female,35,Jaipur,Rajasthan,2024-01-11,Silver
+CUST0411,Manish Mehta,manish.mehta15@example.com,Male,18,Hyderabad,Telangana,2023-04-27,Bronze
+CUST0412,Rohit Joshi,rohit.joshi16@example.com,Female,26,Ahmedabad,Gujarat,2024-06-14,Bronze
+CUST0413,Palak Choudhury,palak.choudhury17@example.com,Female,39,Delhi,Delhi,2023-09-26,Silver
+CUST0414,Tanvi Chopra,tanvi.chopra18@example.com,Female,18,Hyderabad,Telangana,2024-09-18,Silver
+CUST0415,Tanvi Gupta,tanvi.gupta19@example.com,Male,34,Hyderabad,Telangana,2023-05-06,Silver
+CUST0416,Ishita Patil,ishita.patil20@example.com,Female,35,Ahmedabad,Gujarat,2023-06-26,Bronze
+CUST0417,Rohan Roy,rohan.roy21@example.com,Male,40,Chennai,Tamil Nadu,2024-12-27,Bronze
+CUST0418,Kritika Choudhury,kritika.choudhury22@example.com,Male,18,Pune,Maharashtra,2023-11-04,Bronze
+CUST0419,Tanvi Joshi,tanvi.joshi23@example.com,Male,18,Chennai,Tamil Nadu,2024-06-04,Silver
+CUST0420,Priya Rao,priya.rao24@example.com,Female,43,Bengaluru,Karnataka,2023-08-31,Gold
+CUST0421,Aarav Kaur,aarav.kaur25@example.com,Female,35,Jaipur,Rajasthan,2024-08-09,Bronze
+CUST0422,Aryan Choudhury,aryan.choudhury26@example.com,Male,30,Bengaluru,Karnataka,2024-09-18,Silver
+CUST0423,Rohan Iyer,rohan.iyer27@example.com,Female,18,Kolkata,West Bengal,2025-01-04,Silver
+CUST0424,Saurabh Khan,saurabh.khan28@example.com,Male,29,Kolkata,West Bengal,2025-04-23,Gold
+CUST0425,Aditya Roy,aditya.roy29@example.com,Female,23,Delhi,Delhi,2024-04-05,Gold
+CUST0426,Simran Deshmukh,simran.deshmukh30@example.com,Male,43,Chennai,Tamil Nadu,2023-05-12,Silver
+CUST0427,Dev Singh,dev.singh31@example.com,Male,20,Kolkata,West Bengal,2024-05-29,Bronze
+CUST0428,Nitin Nair,nitin.nair32@example.com,Female,31,Jaipur,Rajasthan,2023-06-06,Silver
+CUST0429,Sneha Joshi,sneha.joshi33@example.com,Male,42,Chennai,Tamil Nadu,2024-12-27,Gold
+CUST0430,Divya Deshmukh,divya.deshmukh34@example.com,Male,40,Pune,Maharashtra,2025-05-16,Silver
+CUST0431,Karan Rao,karan.rao35@example.com,Male,29,Jaipur,Rajasthan,2023-10-09,Silver
+CUST0432,Arjun Iyer,arjun.iyer36@example.com,Male,40,Lucknow,Uttar Pradesh,2024-06-30,Silver
+CUST0433,Saurabh Joshi,saurabh.joshi37@example.com,Male,42,Lucknow,Uttar Pradesh,2024-08-17,Bronze
+CUST0434,Sneha Reddy,sneha.reddy38@example.com,Male,35,Lucknow,Uttar Pradesh,2023-12-12,Bronze
+CUST0435,Nitin Sharma,nitin.sharma39@example.com,Female,38,Delhi,Delhi,2023-02-16,Silver
+CUST0436,Arjun Rao,arjun.rao40@example.com,Male,31,Lucknow,Uttar Pradesh,2024-03-02,Platinum
+CUST0437,Kavya Choudhury,kavya.choudhury41@example.com,Female,45,Pune,Maharashtra,2024-10-19,Platinum
+CUST0438,Kavya Kulkarni,kavya.kulkarni42@example.com,Female,33,Kolkata,West Bengal,2023-11-01,Gold
+CUST0439,Rohan Verma,rohan.verma43@example.com,Female,19,Bengaluru,Karnataka,2024-03-26,Bronze
+CUST0440,Kavya Chopra,kavya.chopra44@example.com,Male,39,Hyderabad,Telangana,2023-12-15,Bronze
+CUST0441,Manish Roy,manish.roy45@example.com,Male,23,Chennai,Tamil Nadu,2024-02-13,Bronze
+CUST0442,Dev Kaur,dev.kaur46@example.com,Male,46,Jaipur,Rajasthan,2024-07-29,Silver
+CUST0443,Manish Kulkarni,manish.kulkarni47@example.com,Female,38,Ahmedabad,Gujarat,2023-05-06,Bronze
+CUST0444,Aryan Kulkarni,aryan.kulkarni48@example.com,Male,18,Bengaluru,Karnataka,2023-04-10,Gold
+CUST0445,Pooja Malhotra,pooja.malhotra49@example.com,Male,42,Lucknow,Uttar Pradesh,2024-03-04,Bronze
+CUST0446,Ishita Joshi,ishita.joshi50@example.com,Female,36,Chennai,Tamil Nadu,2024-08-14,Silver
+CUST0447,Vivek Joshi,vivek.joshi51@example.com,Female,41,Ahmedabad,Gujarat,2024-06-11,Bronze
+CUST0448,Kavya Iyer,kavya.iyer52@example.com,Male,34,Ahmedabad,Gujarat,2023-01-24,Gold
+CUST0449,Rahul Deshmukh,rahul.deshmukh53@example.com,Male,46,Ahmedabad,Gujarat,2023-09-04,Platinum
+CUST0450,Abhishek Kaur,abhishek.kaur54@example.com,Female,27,Mumbai,Maharashtra,2023-02-21,Bronze
+CUST0451,Kavya Reddy,kavya.reddy55@example.com,Male,43,Ahmedabad,Gujarat,2023-10-20,Silver
+CUST0452,Ishita Nair,ishita.nair56@example.com,Female,37,Kolkata,West Bengal,2023-05-18,Platinum
+CUST0453,Rohit Kaur,rohit.kaur57@example.com,Male,18,Kolkata,West Bengal,2024-01-10,Gold
+CUST0454,Rahul Verma,rahul.verma58@example.com,Male,18,Lucknow,Uttar Pradesh,2024-07-29,Silver
+CUST0455,Divya Choudhury,divya.choudhury59@example.com,Female,30,Pune,Maharashtra,2023-03-17,Bronze
+CUST0456,Saurabh Chopra,saurabh.chopra60@example.com,Male,25,Jaipur,Rajasthan,2023-10-14,Bronze
+CUST0457,Aditya Nair,aditya.nair61@example.com,Female,18,Kolkata,West Bengal,2024-01-18,Bronze
+CUST0458,Kritika Kaur,kritika.kaur62@example.com,Female,21,Bengaluru,Karnataka,2023-07-23,Silver
+CUST0459,Saurabh Verma,saurabh.verma63@example.com,Male,32,Mumbai,Maharashtra,2023-02-09,Bronze
+CUST0460,Tanvi Roy,tanvi.roy64@example.com,Female,25,Ahmedabad,Gujarat,2024-06-15,Gold
+CUST0461,Aditya Reddy,aditya.reddy65@example.com,Female,57,Jaipur,Rajasthan,2023-05-24,Platinum
+CUST0462,Palak Reddy,palak.reddy66@example.com,Female,27,Chennai,Tamil Nadu,2023-06-16,Bronze
+CUST0463,Nandini Iyer,nandini.iyer67@example.com,Female,45,Lucknow,Uttar Pradesh,2023-12-11,Platinum
+CUST0464,Tanvi Bose,tanvi.bose68@example.com,Male,50,Pune,Maharashtra,2024-05-01,Silver
+CUST0465,Divya Roy,divya.roy69@example.com,Female,28,Delhi,Delhi,2024-03-02,Bronze
+CUST0466,Ayesha Sharma,ayesha.sharma70@example.com,Female,28,Lucknow,Uttar Pradesh,2024-04-30,Bronze
+CUST0467,Arjun Bose,arjun.bose71@example.com,Male,29,Lucknow,Uttar Pradesh,2023-08-22,Gold
+CUST0468,Abhishek Gupta,abhishek.gupta72@example.com,Female,32,Bengaluru,Karnataka,2024-06-20,Platinum
+CUST0469,Aditya Kulkarni,aditya.kulkarni73@example.com,Male,30,Mumbai,Maharashtra,2024-08-09,Gold
+CUST0470,Vivek Sharma,vivek.sharma74@example.com,Female,22,Ahmedabad,Gujarat,2023-11-18,Gold
+CUST0471,Aditya Khan,aditya.khan75@example.com,Female,37,Hyderabad,Telangana,2024-02-25,Silver
+CUST0472,Ishita Verma,ishita.verma76@example.com,Male,30,Bengaluru,Karnataka,2024-06-15,Bronze
+CUST0473,Kritika Roy,kritika.roy77@example.com,Female,57,Ahmedabad,Gujarat,2024-06-22,Bronze
+CUST0474,Manish Joshi,manish.joshi78@example.com,Female,43,Ahmedabad,Gujarat,2024-06-29,Silver
+CUST0475,Kritika Kaur,kritika.kaur79@example.com,Female,30,Pune,Maharashtra,2024-09-16,Bronze
+CUST0476,Vivek Kulkarni,vivek.kulkarni80@example.com,Female,39,Pune,Maharashtra,2024-07-25,Bronze
+CUST0477,Meera Iyer,meera.iyer81@example.com,Male,39,Pune,Maharashtra,2024-12-22,Gold
+CUST0478,Tanvi Gupta,tanvi.gupta82@example.com,Female,44,Chennai,Tamil Nadu,2024-05-06,Silver
+CUST0479,Kritika Mehta,kritika.mehta83@example.com,Female,18,Pune,Maharashtra,2023-05-05,Bronze
+CUST0480,Manav Malhotra,manav.malhotra84@example.com,Male,21,Chennai,Tamil Nadu,2025-03-02,Bronze
+CUST0481,Pooja Verma,pooja.verma85@example.com,Male,25,Pune,Maharashtra,2025-01-01,Silver
+CUST0482,Divya Chopra,divya.chopra86@example.com,Female,33,Pune,Maharashtra,2025-02-04,Bronze
+CUST0483,Vivek Rao,vivek.rao87@example.com,Female,18,Jaipur,Rajasthan,2023-10-05,Silver
+CUST0484,Aditya Nair,aditya.nair88@example.com,Male,25,Lucknow,Uttar Pradesh,2025-01-28,Silver
+CUST0485,Meera Verma,meera.verma89@example.com,Male,47,Jaipur,Rajasthan,2023-08-20,Gold
+CUST0486,Ananya Nair,ananya.nair90@example.com,Female,22,Kolkata,West Bengal,2023-12-05,Silver
+CUST0487,Priya Singh,priya.singh91@example.com,Male,36,Mumbai,Maharashtra,2024-07-17,Bronze
+CUST0488,Neha Gupta,neha.gupta92@example.com,Male,37,Ahmedabad,Gujarat,2024-10-28,Silver
+CUST0489,Dev Iyer,dev.iyer93@example.com,Male,38,Chennai,Tamil Nadu,2023-10-20,Gold
+CUST0490,Palak Patil,palak.patil94@example.com,Male,41,Lucknow,Uttar Pradesh,2023-08-26,Gold
+CUST0491,Palak Joshi,palak.joshi95@example.com,Male,44,Kolkata,West Bengal,2025-05-07,Silver
+CUST0492,Palak Verma,palak.verma96@example.com,Female,49,Kolkata,West Bengal,2025-03-17,Gold
+CUST0493,Sneha Iyer,sneha.iyer97@example.com,Female,30,Mumbai,Maharashtra,2023-01-10,Bronze
+CUST0494,Abhishek Reddy,abhishek.reddy98@example.com,Female,25,Delhi,Delhi,2023-12-10,Silver
+CUST0495,Aryan Choudhury,aryan.choudhury0@example.com,Male,38,Jaipur,Rajasthan,2024-05-20,Bronze
+CUST0496,Ishita Deshmukh,ishita.deshmukh1@example.com,Male,38,Ahmedabad,Gujarat,2023-10-07,Silver
+CUST0497,Ayesha Nair,ayesha.nair2@example.com,Female,42,Chennai,Tamil Nadu,2023-06-16,Bronze
+CUST0498,Arjun Mehta,arjun.mehta3@example.com,Female,19,Bengaluru,Karnataka,2023-01-15,Platinum
+CUST0499,Ayesha Iyer,ayesha.iyer4@example.com,Male,41,Lucknow,Uttar Pradesh,2024-11-21,Silver
+CUST0500,Sneha Reddy,sneha.reddy5@example.com,Female,20,Kolkata,West Bengal,2025-04-26,Silver
+CUST0501,Saurabh Roy,saurabh.roy6@example.com,Male,36,Delhi,Delhi,2024-02-15,Gold
+CUST0502,Sneha Singh,sneha.singh7@example.com,Male,29,Ahmedabad,Gujarat,2023-11-28,Silver
+CUST0503,Aarav Mehta,aarav.mehta8@example.com,Female,46,Kolkata,West Bengal,2023-08-30,Platinum
+CUST0504,Dev Mehta,dev.mehta9@example.com,Male,19,Chennai,Tamil Nadu,2023-11-06,Platinum
+CUST0505,Karan Kaur,karan.kaur10@example.com,Male,35,Hyderabad,Telangana,2023-03-05,Bronze
+CUST0506,Aryan Iyer,aryan.iyer11@example.com,Female,38,Bengaluru,Karnataka,2024-02-20,Bronze
+CUST0507,Tanvi Nair,tanvi.nair12@example.com,Male,30,Pune,Maharashtra,2024-01-12,Bronze
+CUST0508,Meera Singh,meera.singh13@example.com,Female,35,Ahmedabad,Gujarat,2023-06-06,Silver
+CUST0509,Rohit Reddy,rohit.reddy14@example.com,Female,29,Chennai,Tamil Nadu,2024-03-01,Bronze
+CUST0510,Dev Choudhury,dev.choudhury15@example.com,Male,35,Hyderabad,Telangana,2025-02-19,Gold
+CUST0511,Simran Reddy,simran.reddy16@example.com,Female,37,Delhi,Delhi,2024-06-22,Platinum
+CUST0512,Saurabh Kaur,saurabh.kaur17@example.com,Male,28,Delhi,Delhi,2024-07-31,Bronze
+CUST0513,Ananya Choudhury,ananya.choudhury18@example.com,Male,32,Jaipur,Rajasthan,2023-07-27,Bronze
+CUST0514,Sneha Roy,sneha.roy19@example.com,Male,18,Jaipur,Rajasthan,2024-03-28,Gold
+CUST0515,Simran Rao,simran.rao20@example.com,Male,18,Lucknow,Uttar Pradesh,2024-05-15,Silver
+CUST0516,Manav Deshmukh,manav.deshmukh21@example.com,Male,29,Ahmedabad,Gujarat,2025-04-08,Platinum
+CUST0517,Aryan Singh,aryan.singh22@example.com,Female,21,Jaipur,Rajasthan,2024-03-01,Bronze
+CUST0518,Abhishek Verma,abhishek.verma23@example.com,Female,32,Jaipur,Rajasthan,2024-04-18,Gold
+CUST0519,Rohit Sharma,rohit.sharma24@example.com,Male,45,Kolkata,West Bengal,2023-09-18,Silver
+CUST0520,Rohit Rao,rohit.rao25@example.com,Male,47,Lucknow,Uttar Pradesh,2023-03-16,Bronze
+CUST0521,Neha Kaur,neha.kaur26@example.com,Male,31,Delhi,Delhi,2024-07-08,Platinum
+CUST0522,Palak Patil,palak.patil27@example.com,Female,22,Ahmedabad,Gujarat,2023-02-02,Platinum
+CUST0523,Neha Joshi,neha.joshi28@example.com,Female,21,Bengaluru,Karnataka,2025-02-23,Bronze
+CUST0524,Divya Malhotra,divya.malhotra29@example.com,Female,50,Ahmedabad,Gujarat,2025-06-09,Bronze
+CUST0525,Rahul Patil,rahul.patil30@example.com,Female,42,Jaipur,Rajasthan,2023-05-17,Platinum
+CUST0526,Priya Joshi,priya.joshi31@example.com,Male,31,Jaipur,Rajasthan,2024-02-07,Bronze
+CUST0527,Rohit Kulkarni,rohit.kulkarni32@example.com,Male,34,Mumbai,Maharashtra,2025-02-13,Bronze
+CUST0528,Pooja Chopra,pooja.chopra33@example.com,Female,31,Jaipur,Rajasthan,2024-03-10,Bronze
+CUST0529,Nitin Kulkarni,nitin.kulkarni34@example.com,Female,39,Hyderabad,Telangana,2024-04-16,Gold
+CUST0530,Aditya Mehta,aditya.mehta35@example.com,Male,33,Hyderabad,Telangana,2025-06-15,Bronze
+CUST0531,Ananya Khan,ananya.khan36@example.com,Male,41,Lucknow,Uttar Pradesh,2025-02-23,Gold
+CUST0532,Meera Rao,meera.rao37@example.com,Male,41,Delhi,Delhi,2023-04-14,Gold
+CUST0533,Aryan Reddy,aryan.reddy38@example.com,Male,24,Mumbai,Maharashtra,2023-09-08,Gold
+CUST0534,Rahul Chopra,rahul.chopra39@example.com,Male,37,Hyderabad,Telangana,2024-07-06,Bronze
+CUST0535,Dev Verma,dev.verma40@example.com,Female,46,Bengaluru,Karnataka,2024-05-30,Gold
+CUST0536,Meera Bose,meera.bose41@example.com,Female,38,Chennai,Tamil Nadu,2024-08-14,Silver
+CUST0537,Meera Iyer,meera.iyer42@example.com,Male,37,Bengaluru,Karnataka,2024-11-07,Bronze
+CUST0538,Neha Iyer,neha.iyer43@example.com,Male,26,Pune,Maharashtra,2023-03-04,Bronze
+CUST0539,Arjun Khan,arjun.khan44@example.com,Male,26,Jaipur,Rajasthan,2024-05-22,Bronze
+CUST0540,Divya Malhotra,divya.malhotra45@example.com,Female,33,Jaipur,Rajasthan,2023-11-23,Silver
+CUST0541,Neha Singh,neha.singh46@example.com,Male,27,Pune,Maharashtra,2024-01-21,Bronze
+CUST0542,Dev Choudhury,dev.choudhury47@example.com,Male,43,Ahmedabad,Gujarat,2023-09-04,Silver
+CUST0543,Pooja Singh,pooja.singh48@example.com,Female,32,Ahmedabad,Gujarat,2023-03-01,Bronze
+CUST0544,Neha Choudhury,neha.choudhury49@example.com,Female,27,Jaipur,Rajasthan,2023-05-18,Silver
+CUST0545,Meera Mehta,meera.mehta50@example.com,Male,44,Hyderabad,Telangana,2023-12-05,Silver
+CUST0546,Palak Chopra,palak.chopra51@example.com,Male,23,Chennai,Tamil Nadu,2023-04-05,Gold
+CUST0547,Ananya Mehta,ananya.mehta52@example.com,Male,33,Kolkata,West Bengal,2024-11-20,Gold
+CUST0548,Ishita Patil,ishita.patil53@example.com,Male,28,Hyderabad,Telangana,2025-04-03,Bronze
+CUST0549,Kavya Rao,kavya.rao54@example.com,Male,58,Chennai,Tamil Nadu,2023-11-07,Bronze
+CUST0550,Vivek Rao,vivek.rao55@example.com,Female,33,Delhi,Delhi,2025-02-03,Silver
+CUST0551,Palak Kulkarni,palak.kulkarni56@example.com,Male,25,Lucknow,Uttar Pradesh,2024-12-21,Silver
+CUST0552,Rahul Kulkarni,rahul.kulkarni57@example.com,Female,34,Jaipur,Rajasthan,2023-11-26,Bronze
+CUST0553,Rahul Chopra,rahul.chopra58@example.com,Female,32,Jaipur,Rajasthan,2024-10-26,Bronze
+CUST0554,Pooja Mehta,pooja.mehta59@example.com,Female,26,Chennai,Tamil Nadu,2024-06-09,Bronze
+CUST0555,Aryan Nair,aryan.nair60@example.com,Female,43,Ahmedabad,Gujarat,2025-02-18,Silver
+CUST0556,Palak Rao,palak.rao61@example.com,Female,40,Chennai,Tamil Nadu,2023-11-17,Bronze
+CUST0557,Ananya Bose,ananya.bose62@example.com,Male,36,Hyderabad,Telangana,2025-01-29,Bronze
+CUST0558,Aarav Mehta,aarav.mehta63@example.com,Female,26,Jaipur,Rajasthan,2024-08-21,Silver
+CUST0559,Pooja Singh,pooja.singh64@example.com,Male,52,Hyderabad,Telangana,2023-12-04,Bronze
+CUST0560,Rahul Bose,rahul.bose65@example.com,Female,37,Hyderabad,Telangana,2024-05-26,Gold
+CUST0561,Karan Gupta,karan.gupta66@example.com,Male,28,Ahmedabad,Gujarat,2024-04-16,Silver
+CUST0562,Rohit Kaur,rohit.kaur67@example.com,Female,44,Bengaluru,Karnataka,2023-05-24,Gold
+CUST0563,Sneha Choudhury,sneha.choudhury68@example.com,Male,35,Mumbai,Maharashtra,2024-06-20,Bronze
+CUST0564,Nitin Patil,nitin.patil69@example.com,Male,43,Mumbai,Maharashtra,2025-02-21,Gold
+CUST0565,Neha Singh,neha.singh70@example.com,Male,38,Hyderabad,Telangana,2023-03-11,Silver
+CUST0566,Aarav Rao,aarav.rao71@example.com,Female,55,Jaipur,Rajasthan,2024-04-11,Silver
+CUST0567,Ananya Reddy,ananya.reddy72@example.com,Female,23,Lucknow,Uttar Pradesh,2024-05-09,Bronze
+CUST0568,Aarav Sharma,aarav.sharma73@example.com,Female,28,Jaipur,Rajasthan,2024-07-18,Gold
+CUST0569,Aarav Sharma,aarav.sharma74@example.com,Female,63,Jaipur,Rajasthan,2025-01-09,Silver
+CUST0570,Kritika Iyer,kritika.iyer75@example.com,Female,33,Mumbai,Maharashtra,2024-05-29,Silver
+CUST0571,Ayesha Joshi,ayesha.joshi76@example.com,Male,22,Delhi,Delhi,2023-04-09,Bronze
+CUST0572,Meera Rao,meera.rao77@example.com,Female,39,Lucknow,Uttar Pradesh,2024-06-23,Silver
+CUST0573,Nitin Kaur,nitin.kaur78@example.com,Female,44,Pune,Maharashtra,2025-03-25,Bronze
+CUST0574,Rohan Kaur,rohan.kaur79@example.com,Male,32,Kolkata,West Bengal,2024-04-15,Silver
+CUST0575,Tanvi Kulkarni,tanvi.kulkarni80@example.com,Male,18,Pune,Maharashtra,2024-12-01,Silver
+CUST0576,Arjun Verma,arjun.verma81@example.com,Female,24,Delhi,Delhi,2024-02-20,Bronze
+CUST0577,Rahul Choudhury,rahul.choudhury82@example.com,Male,18,Ahmedabad,Gujarat,2023-02-27,Platinum
+CUST0578,Tanvi Joshi,tanvi.joshi83@example.com,Female,54,Delhi,Delhi,2024-05-26,Silver
+CUST0579,Arjun Roy,arjun.roy84@example.com,Male,18,Lucknow,Uttar Pradesh,2025-05-28,Silver
+CUST0580,Manav Deshmukh,manav.deshmukh85@example.com,Male,28,Mumbai,Maharashtra,2023-08-24,Silver
+CUST0581,Manav Bose,manav.bose86@example.com,Male,39,Ahmedabad,Gujarat,2023-10-05,Gold
+CUST0582,Palak Patil,palak.patil87@example.com,Male,21,Pune,Maharashtra,2024-07-10,Silver
+CUST0583,Sneha Roy,sneha.roy88@example.com,Male,38,Mumbai,Maharashtra,2023-08-01,Silver
+CUST0584,Dev Malhotra,dev.malhotra89@example.com,Male,27,Delhi,Delhi,2023-11-03,Gold
+CUST0585,Abhishek Kulkarni,abhishek.kulkarni90@example.com,Female,37,Lucknow,Uttar Pradesh,2025-05-04,Bronze
+CUST0586,Simran Choudhury,simran.choudhury91@example.com,Male,31,Chennai,Tamil Nadu,2024-01-29,Silver
+CUST0587,Ayesha Patil,ayesha.patil92@example.com,Female,32,Jaipur,Rajasthan,2025-02-02,Bronze
+CUST0588,Ananya Nair,ananya.nair93@example.com,Male,44,Kolkata,West Bengal,2023-08-26,Silver
+CUST0589,Manish Reddy,manish.reddy94@example.com,Female,22,Lucknow,Uttar Pradesh,2024-09-01,Bronze
+CUST0590,Dev Roy,dev.roy95@example.com,Female,37,Mumbai,Maharashtra,2024-10-11,Bronze
+CUST0591,Ayesha Chopra,ayesha.chopra96@example.com,Female,42,Ahmedabad,Gujarat,2023-08-22,Platinum
+CUST0592,Kritika Malhotra,kritika.malhotra97@example.com,Female,21,Kolkata,West Bengal,2023-07-10,Bronze
+CUST0593,Rohan Reddy,rohan.reddy98@example.com,Male,18,Pune,Maharashtra,2025-03-28,Gold
+CUST0594,Tanvi Patil,tanvi.patil0@example.com,Male,31,Delhi,Delhi,2023-10-02,Bronze
+CUST0595,Rahul Singh,rahul.singh1@example.com,Female,18,Kolkata,West Bengal,2023-11-21,Bronze
+CUST0596,Priya Patil,priya.patil2@example.com,Female,36,Mumbai,Maharashtra,2023-11-12,Gold
+CUST0597,Divya Mehta,divya.mehta3@example.com,Male,40,Delhi,Delhi,2023-05-16,Bronze
+CUST0598,Sneha Khan,sneha.khan4@example.com,Female,20,Ahmedabad,Gujarat,2024-07-24,Silver
+CUST0599,Priya Sharma,priya.sharma5@example.com,Male,42,Delhi,Delhi,2023-12-29,Bronze
+CUST0600,Nandini Reddy,nandini.reddy6@example.com,Female,46,Chennai,Tamil Nadu,2025-06-03,Silver
+CUST0601,Aarav Iyer,aarav.iyer7@example.com,Male,37,Kolkata,West Bengal,2024-02-02,Gold
+CUST0602,Rohit Choudhury,rohit.choudhury8@example.com,Male,46,Hyderabad,Telangana,2024-08-08,Gold
+CUST0603,Simran Malhotra,simran.malhotra9@example.com,Female,30,Bengaluru,Karnataka,2023-05-23,Bronze
+CUST0604,Pooja Mehta,pooja.mehta10@example.com,Male,28,Ahmedabad,Gujarat,2023-05-30,Bronze
+CUST0605,Sneha Khan,sneha.khan11@example.com,Female,32,Pune,Maharashtra,2024-03-07,Silver
+CUST0606,Kavya Patil,kavya.patil12@example.com,Male,23,Chennai,Tamil Nadu,2023-09-15,Platinum
+CUST0607,Rohit Gupta,rohit.gupta13@example.com,Male,28,Lucknow,Uttar Pradesh,2024-09-23,Bronze
+CUST0608,Aryan Nair,aryan.nair14@example.com,Male,34,Bengaluru,Karnataka,2023-11-08,Bronze
+CUST0609,Rahul Roy,rahul.roy15@example.com,Female,35,Lucknow,Uttar Pradesh,2024-01-25,Platinum
+CUST0610,Aryan Roy,aryan.roy16@example.com,Male,38,Kolkata,West Bengal,2025-04-15,Gold
+CUST0611,Pooja Roy,pooja.roy17@example.com,Male,18,Lucknow,Uttar Pradesh,2024-12-12,Silver
+CUST0612,Kavya Roy,kavya.roy18@example.com,Female,63,Bengaluru,Karnataka,2024-02-12,Silver
+CUST0613,Pooja Gupta,pooja.gupta19@example.com,Male,24,Lucknow,Uttar Pradesh,2025-03-11,Bronze
+CUST0614,Manish Malhotra,manish.malhotra20@example.com,Female,40,Pune,Maharashtra,2025-04-16,Silver
+CUST0615,Divya Nair,divya.nair21@example.com,Male,36,Lucknow,Uttar Pradesh,2023-07-24,Platinum
+CUST0616,Simran Choudhury,simran.choudhury22@example.com,Female,27,Mumbai,Maharashtra,2025-01-14,Bronze
+CUST0617,Tanvi Rao,tanvi.rao23@example.com,Female,39,Ahmedabad,Gujarat,2025-03-27,Gold
+CUST0618,Nitin Patil,nitin.patil24@example.com,Female,24,Kolkata,West Bengal,2024-11-20,Gold
+CUST0619,Aditya Iyer,aditya.iyer25@example.com,Male,33,Hyderabad,Telangana,2023-09-16,Platinum
+CUST0620,Tanvi Khan,tanvi.khan26@example.com,Female,54,Kolkata,West Bengal,2023-03-17,Silver
+CUST0621,Nandini Gupta,nandini.gupta27@example.com,Female,29,Lucknow,Uttar Pradesh,2024-02-15,Gold
+CUST0622,Kritika Verma,kritika.verma28@example.com,Male,34,Chennai,Tamil Nadu,2024-12-19,Platinum
+CUST0623,Priya Kulkarni,priya.kulkarni29@example.com,Male,23,Chennai,Tamil Nadu,2023-06-20,Silver
+CUST0624,Abhishek Malhotra,abhishek.malhotra30@example.com,Female,40,Chennai,Tamil Nadu,2025-03-26,Silver
+CUST0625,Priya Sharma,priya.sharma31@example.com,Male,26,Delhi,Delhi,2023-09-22,Bronze
+CUST0626,Saurabh Deshmukh,saurabh.deshmukh32@example.com,Male,36,Jaipur,Rajasthan,2024-08-17,Silver
+CUST0627,Aryan Kaur,aryan.kaur33@example.com,Male,44,Kolkata,West Bengal,2024-04-19,Platinum
+CUST0628,Divya Sharma,divya.sharma34@example.com,Female,31,Ahmedabad,Gujarat,2023-04-18,Gold
+CUST0629,Neha Patil,neha.patil35@example.com,Male,39,Delhi,Delhi,2025-05-01,Silver
+CUST0630,Divya Iyer,divya.iyer36@example.com,Male,37,Chennai,Tamil Nadu,2024-04-11,Bronze
+CUST0631,Saurabh Gupta,saurabh.gupta37@example.com,Male,44,Chennai,Tamil Nadu,2024-05-02,Bronze
+CUST0632,Aryan Chopra,aryan.chopra38@example.com,Female,39,Chennai,Tamil Nadu,2023-03-10,Gold
+CUST0633,Ananya Nair,ananya.nair39@example.com,Female,46,Mumbai,Maharashtra,2025-05-19,Gold
+CUST0634,Arjun Nair,arjun.nair40@example.com,Male,31,Bengaluru,Karnataka,2025-01-28,Bronze
+CUST0635,Saurabh Joshi,saurabh.joshi41@example.com,Female,21,Jaipur,Rajasthan,2023-06-13,Silver
+CUST0636,Kritika Khan,kritika.khan42@example.com,Female,18,Ahmedabad,Gujarat,2023-08-26,Silver
+CUST0637,Arjun Joshi,arjun.joshi43@example.com,Female,18,Bengaluru,Karnataka,2024-10-17,Bronze
+CUST0638,Rahul Sharma,rahul.sharma44@example.com,Female,30,Lucknow,Uttar Pradesh,2023-07-22,Bronze
+CUST0639,Abhishek Khan,abhishek.khan45@example.com,Male,35,Kolkata,West Bengal,2023-01-05,Bronze
+CUST0640,Vivek Mehta,vivek.mehta46@example.com,Male,26,Delhi,Delhi,2024-08-14,Silver
+CUST0641,Ayesha Choudhury,ayesha.choudhury47@example.com,Female,18,Bengaluru,Karnataka,2024-01-10,Silver
+CUST0642,Vivek Chopra,vivek.chopra48@example.com,Female,27,Delhi,Delhi,2023-09-26,Gold
+CUST0643,Saurabh Roy,saurabh.roy49@example.com,Female,29,Lucknow,Uttar Pradesh,2024-02-02,Silver
+CUST0644,Abhishek Nair,abhishek.nair50@example.com,Female,33,Chennai,Tamil Nadu,2023-12-27,Bronze
+CUST0645,Nandini Joshi,nandini.joshi51@example.com,Male,48,Pune,Maharashtra,2024-09-21,Bronze
+CUST0646,Simran Singh,simran.singh52@example.com,Male,18,Chennai,Tamil Nadu,2023-05-01,Silver
+CUST0647,Pooja Nair,pooja.nair53@example.com,Male,40,Bengaluru,Karnataka,2024-01-18,Silver
+CUST0648,Saurabh Malhotra,saurabh.malhotra54@example.com,Male,39,Kolkata,West Bengal,2024-09-02,Silver
+CUST0649,Abhishek Malhotra,abhishek.malhotra55@example.com,Female,31,Kolkata,West Bengal,2023-07-10,Platinum
+CUST0650,Arjun Choudhury,arjun.choudhury56@example.com,Male,37,Bengaluru,Karnataka,2024-07-22,Gold
+CUST0651,Kavya Iyer,kavya.iyer57@example.com,Female,32,Bengaluru,Karnataka,2023-07-11,Bronze
+CUST0652,Nitin Chopra,nitin.chopra58@example.com,Female,39,Lucknow,Uttar Pradesh,2023-02-24,Bronze
+CUST0653,Aarav Gupta,aarav.gupta59@example.com,Female,25,Bengaluru,Karnataka,2023-07-19,Silver
+CUST0654,Kritika Deshmukh,kritika.deshmukh60@example.com,Female,24,Ahmedabad,Gujarat,2024-02-23,Bronze
+CUST0655,Neha Chopra,neha.chopra61@example.com,Male,18,Ahmedabad,Gujarat,2023-06-21,Gold
+CUST0656,Abhishek Sharma,abhishek.sharma62@example.com,Male,37,Hyderabad,Telangana,2023-10-27,Silver
+CUST0657,Karan Kulkarni,karan.kulkarni63@example.com,Male,27,Jaipur,Rajasthan,2023-10-23,Silver
+CUST0658,Dev Chopra,dev.chopra64@example.com,Female,18,Lucknow,Uttar Pradesh,2025-01-30,Bronze
+CUST0659,Kritika Deshmukh,kritika.deshmukh65@example.com,Male,24,Delhi,Delhi,2024-08-09,Bronze
+CUST0660,Karan Choudhury,karan.choudhury66@example.com,Male,39,Chennai,Tamil Nadu,2024-07-09,Silver
+CUST0661,Dev Chopra,dev.chopra67@example.com,Female,35,Jaipur,Rajasthan,2023-08-12,Silver
+CUST0662,Priya Kulkarni,priya.kulkarni68@example.com,Male,24,Pune,Maharashtra,2025-06-14,Bronze
+CUST0663,Aryan Mehta,aryan.mehta69@example.com,Male,47,Chennai,Tamil Nadu,2025-06-01,Platinum
+CUST0664,Aryan Nair,aryan.nair70@example.com,Female,33,Hyderabad,Telangana,2023-08-03,Silver
+CUST0665,Ishita Reddy,ishita.reddy71@example.com,Male,38,Kolkata,West Bengal,2023-06-19,Bronze
+CUST0666,Ayesha Rao,ayesha.rao72@example.com,Male,35,Hyderabad,Telangana,2025-04-04,Silver
+CUST0667,Abhishek Kaur,abhishek.kaur73@example.com,Male,31,Jaipur,Rajasthan,2023-10-15,Gold
+CUST0668,Manish Iyer,manish.iyer74@example.com,Female,38,Pune,Maharashtra,2024-08-09,Bronze
+CUST0669,Ishita Deshmukh,ishita.deshmukh75@example.com,Female,45,Delhi,Delhi,2023-05-19,Silver
+CUST0670,Palak Verma,palak.verma76@example.com,Male,30,Pune,Maharashtra,2025-06-06,Gold
+CUST0671,Tanvi Singh,tanvi.singh77@example.com,Female,41,Hyderabad,Telangana,2023-05-30,Bronze
+CUST0672,Nitin Kulkarni,nitin.kulkarni78@example.com,Male,26,Kolkata,West Bengal,2024-05-16,Bronze
+CUST0673,Abhishek Mehta,abhishek.mehta79@example.com,Female,52,Kolkata,West Bengal,2024-01-20,Gold
+CUST0674,Rohan Patil,rohan.patil80@example.com,Female,25,Kolkata,West Bengal,2024-06-11,Bronze
+CUST0675,Tanvi Kaur,tanvi.kaur81@example.com,Female,56,Ahmedabad,Gujarat,2024-05-14,Silver
+CUST0676,Abhishek Sharma,abhishek.sharma82@example.com,Female,21,Delhi,Delhi,2025-01-18,Bronze
+CUST0677,Arjun Kaur,arjun.kaur83@example.com,Female,30,Delhi,Delhi,2025-03-25,Silver
+CUST0678,Vivek Khan,vivek.khan84@example.com,Female,38,Hyderabad,Telangana,2024-05-21,Bronze
+CUST0679,Manish Iyer,manish.iyer85@example.com,Male,46,Chennai,Tamil Nadu,2024-07-14,Bronze
+CUST0680,Abhishek Gupta,abhishek.gupta86@example.com,Male,50,Chennai,Tamil Nadu,2024-11-29,Silver
+CUST0681,Ananya Nair,ananya.nair87@example.com,Male,48,Ahmedabad,Gujarat,2023-01-17,Bronze
+CUST0682,Palak Joshi,palak.joshi88@example.com,Male,18,Ahmedabad,Gujarat,2024-04-12,Silver
+CUST0683,Neha Rao,neha.rao89@example.com,Female,38,Bengaluru,Karnataka,2024-10-27,Platinum
+CUST0684,Sneha Mehta,sneha.mehta90@example.com,Female,26,Delhi,Delhi,2024-11-01,Bronze
+CUST0685,Karan Patil,karan.patil91@example.com,Male,43,Chennai,Tamil Nadu,2024-11-11,Bronze
+CUST0686,Ananya Malhotra,ananya.malhotra92@example.com,Male,45,Pune,Maharashtra,2025-01-13,Platinum
+CUST0687,Neha Patil,neha.patil93@example.com,Male,37,Delhi,Delhi,2023-01-02,Bronze
+CUST0688,Kavya Patil,kavya.patil94@example.com,Male,28,Bengaluru,Karnataka,2024-08-30,Silver
+CUST0689,Saurabh Chopra,saurabh.chopra95@example.com,Female,22,Mumbai,Maharashtra,2023-01-09,Bronze
+CUST0690,Nitin Nair,nitin.nair96@example.com,Male,26,Kolkata,West Bengal,2024-12-11,Bronze
+CUST0691,Kavya Patil,kavya.patil97@example.com,Male,26,Hyderabad,Telangana,2024-01-28,Bronze
+CUST0692,Rohit Nair,rohit.nair98@example.com,Female,34,Delhi,Delhi,2023-11-17,Gold
+CUST0693,Manav Iyer,manav.iyer0@example.com,Male,44,Bengaluru,Karnataka,2024-01-27,Bronze
+CUST0694,Arjun Singh,arjun.singh1@example.com,Male,35,Delhi,Delhi,2024-06-27,Silver
+CUST0695,Nandini Joshi,nandini.joshi2@example.com,Male,22,Ahmedabad,Gujarat,2023-12-26,Silver
+CUST0696,Arjun Singh,arjun.singh3@example.com,Female,21,Kolkata,West Bengal,2024-09-22,Silver
+CUST0697,Ishita Rao,ishita.rao4@example.com,Male,40,Delhi,Delhi,2023-04-13,Platinum
+CUST0698,Dev Nair,dev.nair5@example.com,Female,53,Lucknow,Uttar Pradesh,2025-01-17,Silver
+CUST0699,Divya Khan,divya.khan6@example.com,Male,34,Chennai,Tamil Nadu,2025-03-21,Silver
+CUST0700,Meera Mehta,meera.mehta7@example.com,Female,27,Delhi,Delhi,2023-09-12,Platinum
+CUST0701,Dev Sharma,dev.sharma8@example.com,Male,24,Pune,Maharashtra,2023-07-30,Bronze
+CUST0702,Rohit Malhotra,rohit.malhotra9@example.com,Male,40,Pune,Maharashtra,2024-10-23,Silver
+CUST0703,Ayesha Kulkarni,ayesha.kulkarni10@example.com,Male,49,Ahmedabad,Gujarat,2024-01-31,Bronze
+CUST0704,Meera Gupta,meera.gupta11@example.com,Male,30,Lucknow,Uttar Pradesh,2023-03-14,Bronze
+CUST0705,Divya Roy,divya.roy12@example.com,Female,28,Bengaluru,Karnataka,2024-02-01,Silver
+CUST0706,Divya Choudhury,divya.choudhury13@example.com,Female,19,Bengaluru,Karnataka,2025-02-20,Bronze
+CUST0707,Dev Patil,dev.patil14@example.com,Male,34,Mumbai,Maharashtra,2024-08-24,Platinum
+CUST0708,Aarav Mehta,aarav.mehta15@example.com,Male,41,Hyderabad,Telangana,2023-02-10,Gold
+CUST0709,Ayesha Malhotra,ayesha.malhotra16@example.com,Female,26,Jaipur,Rajasthan,2023-10-21,Silver
+CUST0710,Neha Malhotra,neha.malhotra17@example.com,Male,36,Delhi,Delhi,2024-10-17,Gold
+CUST0711,Karan Patil,karan.patil18@example.com,Male,39,Pune,Maharashtra,2023-03-22,Bronze
+CUST0712,Ayesha Singh,ayesha.singh19@example.com,Female,39,Jaipur,Rajasthan,2023-12-01,Silver
+CUST0713,Abhishek Patil,abhishek.patil20@example.com,Female,23,Pune,Maharashtra,2024-12-16,Bronze
+CUST0714,Rohit Kulkarni,rohit.kulkarni21@example.com,Male,25,Mumbai,Maharashtra,2023-09-08,Bronze
+CUST0715,Palak Khan,palak.khan22@example.com,Male,34,Delhi,Delhi,2024-04-09,Bronze
+CUST0716,Pooja Joshi,pooja.joshi23@example.com,Male,41,Delhi,Delhi,2023-01-13,Bronze
+CUST0717,Tanvi Sharma,tanvi.sharma24@example.com,Female,55,Bengaluru,Karnataka,2024-05-23,Bronze
+CUST0718,Saurabh Deshmukh,saurabh.deshmukh25@example.com,Female,22,Pune,Maharashtra,2023-06-20,Silver
+CUST0719,Aditya Mehta,aditya.mehta26@example.com,Male,36,Delhi,Delhi,2025-02-28,Gold
+CUST0720,Manish Khan,manish.khan27@example.com,Male,33,Pune,Maharashtra,2024-06-20,Gold
+CUST0721,Karan Bose,karan.bose28@example.com,Female,29,Delhi,Delhi,2024-05-23,Bronze
+CUST0722,Saurabh Kaur,saurabh.kaur29@example.com,Male,45,Mumbai,Maharashtra,2024-05-26,Gold
+CUST0723,Divya Joshi,divya.joshi30@example.com,Male,39,Pune,Maharashtra,2025-03-02,Gold
+CUST0724,Manav Bose,manav.bose31@example.com,Male,39,Delhi,Delhi,2023-08-22,Bronze
+CUST0725,Ananya Sharma,ananya.sharma32@example.com,Female,22,Hyderabad,Telangana,2023-02-17,Bronze
+CUST0726,Divya Malhotra,divya.malhotra33@example.com,Male,30,Bengaluru,Karnataka,2023-07-03,Silver
+CUST0727,Kritika Khan,kritika.khan34@example.com,Male,34,Hyderabad,Telangana,2023-11-26,Bronze
+CUST0728,Neha Roy,neha.roy35@example.com,Male,35,Pune,Maharashtra,2025-04-25,Gold
+CUST0729,Abhishek Kaur,abhishek.kaur36@example.com,Male,58,Delhi,Delhi,2024-05-29,Bronze
+CUST0730,Sneha Kulkarni,sneha.kulkarni37@example.com,Female,30,Jaipur,Rajasthan,2023-02-17,Gold
+CUST0731,Rohan Chopra,rohan.chopra38@example.com,Female,18,Pune,Maharashtra,2025-03-03,Bronze
+CUST0732,Manish Patil,manish.patil39@example.com,Male,34,Jaipur,Rajasthan,2024-04-12,Bronze
+CUST0733,Divya Rao,divya.rao40@example.com,Female,39,Pune,Maharashtra,2024-07-31,Bronze
+CUST0734,Rohit Reddy,rohit.reddy41@example.com,Female,34,Hyderabad,Telangana,2024-04-20,Bronze
+CUST0735,Abhishek Gupta,abhishek.gupta42@example.com,Male,18,Hyderabad,Telangana,2025-01-20,Bronze
+CUST0736,Aditya Sharma,aditya.sharma43@example.com,Male,36,Kolkata,West Bengal,2023-01-25,Bronze
+CUST0737,Kritika Kaur,kritika.kaur44@example.com,Male,39,Mumbai,Maharashtra,2023-12-10,Silver
+CUST0738,Dev Malhotra,dev.malhotra45@example.com,Male,21,Pune,Maharashtra,2023-04-17,Silver
+CUST0739,Saurabh Kulkarni,saurabh.kulkarni46@example.com,Male,27,Kolkata,West Bengal,2024-05-18,Bronze
+CUST0740,Aditya Mehta,aditya.mehta47@example.com,Male,33,Delhi,Delhi,2023-02-14,Platinum
+CUST0741,Manav Deshmukh,manav.deshmukh48@example.com,Female,28,Kolkata,West Bengal,2024-12-18,Bronze
+CUST0742,Aryan Patil,aryan.patil49@example.com,Male,29,Lucknow,Uttar Pradesh,2023-04-08,Bronze
+CUST0743,Arjun Malhotra,arjun.malhotra50@example.com,Male,37,Delhi,Delhi,2024-08-29,Bronze
+CUST0744,Neha Singh,neha.singh51@example.com,Female,27,Hyderabad,Telangana,2023-10-26,Bronze
+CUST0745,Ishita Roy,ishita.roy52@example.com,Female,18,Kolkata,West Bengal,2024-12-18,Silver
+CUST0746,Manish Chopra,manish.chopra53@example.com,Male,43,Pune,Maharashtra,2023-08-28,Silver
+CUST0747,Vivek Singh,vivek.singh54@example.com,Male,23,Lucknow,Uttar Pradesh,2023-04-22,Silver
+CUST0748,Priya Joshi,priya.joshi55@example.com,Female,31,Ahmedabad,Gujarat,2024-04-22,Gold
+CUST0749,Neha Nair,neha.nair56@example.com,Male,28,Jaipur,Rajasthan,2024-01-02,Bronze
+CUST0750,Aryan Iyer,aryan.iyer57@example.com,Male,22,Ahmedabad,Gujarat,2023-09-29,Bronze
+CUST0751,Rohan Joshi,rohan.joshi58@example.com,Male,42,Pune,Maharashtra,2025-04-26,Gold
+CUST0752,Vivek Roy,vivek.roy59@example.com,Male,41,Bengaluru,Karnataka,2023-04-04,Bronze
+CUST0753,Divya Malhotra,divya.malhotra60@example.com,Female,30,Jaipur,Rajasthan,2023-02-20,Bronze
+CUST0754,Karan Joshi,karan.joshi61@example.com,Female,33,Mumbai,Maharashtra,2024-02-19,Bronze
+CUST0755,Kritika Choudhury,kritika.choudhury62@example.com,Female,35,Hyderabad,Telangana,2023-04-07,Gold
+CUST0756,Priya Singh,priya.singh63@example.com,Male,22,Delhi,Delhi,2023-01-13,Bronze
+CUST0757,Nitin Kulkarni,nitin.kulkarni64@example.com,Female,24,Bengaluru,Karnataka,2023-07-22,Bronze
+CUST0758,Divya Patil,divya.patil65@example.com,Female,33,Lucknow,Uttar Pradesh,2024-08-23,Silver
+CUST0759,Palak Patil,palak.patil66@example.com,Male,22,Mumbai,Maharashtra,2023-03-08,Silver
+CUST0760,Manav Chopra,manav.chopra67@example.com,Female,33,Bengaluru,Karnataka,2023-04-05,Bronze
+CUST0761,Priya Verma,priya.verma68@example.com,Male,18,Ahmedabad,Gujarat,2023-02-21,Silver
+CUST0762,Palak Bose,palak.bose69@example.com,Female,29,Kolkata,West Bengal,2025-04-21,Bronze
+CUST0763,Kavya Sharma,kavya.sharma70@example.com,Female,36,Kolkata,West Bengal,2024-11-30,Silver
+CUST0764,Sneha Kaur,sneha.kaur71@example.com,Female,36,Hyderabad,Telangana,2023-07-11,Platinum
+CUST0765,Karan Chopra,karan.chopra72@example.com,Male,45,Bengaluru,Karnataka,2023-02-05,Gold
+CUST0766,Arjun Iyer,arjun.iyer73@example.com,Female,22,Ahmedabad,Gujarat,2024-02-26,Bronze
+CUST0767,Ananya Patil,ananya.patil74@example.com,Male,33,Pune,Maharashtra,2024-01-28,Bronze
+CUST0768,Neha Rao,neha.rao75@example.com,Male,43,Jaipur,Rajasthan,2023-09-13,Silver
+CUST0769,Rahul Kaur,rahul.kaur76@example.com,Female,36,Ahmedabad,Gujarat,2024-07-11,Silver
+CUST0770,Divya Bose,divya.bose77@example.com,Female,41,Jaipur,Rajasthan,2023-11-26,Silver
+CUST0771,Karan Joshi,karan.joshi78@example.com,Male,22,Mumbai,Maharashtra,2023-11-23,Bronze
+CUST0772,Aarav Mehta,aarav.mehta79@example.com,Female,34,Mumbai,Maharashtra,2025-04-08,Silver
+CUST0773,Saurabh Kaur,saurabh.kaur80@example.com,Male,31,Lucknow,Uttar Pradesh,2023-08-27,Silver
+CUST0774,Priya Kulkarni,priya.kulkarni81@example.com,Male,34,Hyderabad,Telangana,2023-09-30,Bronze
+CUST0775,Dev Kulkarni,dev.kulkarni82@example.com,Female,25,Lucknow,Uttar Pradesh,2025-05-16,Silver
+CUST0776,Divya Joshi,divya.joshi83@example.com,Female,46,Bengaluru,Karnataka,2023-08-31,Bronze
+CUST0777,Ayesha Kaur,ayesha.kaur84@example.com,Female,40,Lucknow,Uttar Pradesh,2023-01-29,Bronze
+CUST0778,Abhishek Bose,abhishek.bose85@example.com,Male,45,Bengaluru,Karnataka,2024-07-30,Bronze
+CUST0779,Nitin Gupta,nitin.gupta86@example.com,Male,36,Jaipur,Rajasthan,2023-11-13,Bronze
+CUST0780,Kavya Verma,kavya.verma87@example.com,Male,26,Delhi,Delhi,2023-02-27,Gold
+CUST0781,Nandini Kulkarni,nandini.kulkarni88@example.com,Female,40,Mumbai,Maharashtra,2024-06-23,Bronze
+CUST0782,Aarav Roy,aarav.roy89@example.com,Male,47,Lucknow,Uttar Pradesh,2023-07-26,Bronze
+CUST0783,Manish Joshi,manish.joshi90@example.com,Male,36,Chennai,Tamil Nadu,2023-03-02,Bronze
+CUST0784,Aditya Bose,aditya.bose91@example.com,Male,24,Bengaluru,Karnataka,2025-03-03,Gold
+CUST0785,Ishita Deshmukh,ishita.deshmukh92@example.com,Female,28,Chennai,Tamil Nadu,2023-03-16,Silver
+CUST0786,Tanvi Malhotra,tanvi.malhotra93@example.com,Female,34,Lucknow,Uttar Pradesh,2023-04-14,Platinum
+CUST0787,Pooja Roy,pooja.roy94@example.com,Female,48,Bengaluru,Karnataka,2023-06-11,Gold
+CUST0788,Ayesha Gupta,ayesha.gupta95@example.com,Female,51,Chennai,Tamil Nadu,2023-06-28,Silver
+CUST0789,Meera Bose,meera.bose96@example.com,Female,25,Bengaluru,Karnataka,2024-01-23,Gold
+CUST0790,Rohit Iyer,rohit.iyer97@example.com,Male,37,Bengaluru,Karnataka,2023-07-01,Bronze
+CUST0791,Tanvi Bose,tanvi.bose98@example.com,Male,28,Kolkata,West Bengal,2025-05-21,Gold
+CUST0792,Sneha Reddy,sneha.reddy0@example.com,Male,21,Chennai,Tamil Nadu,2025-04-08,Bronze
+CUST0793,Arjun Bose,arjun.bose1@example.com,Male,39,Delhi,Delhi,2024-05-23,Bronze
+CUST0794,Manish Patil,manish.patil2@example.com,Female,35,Hyderabad,Telangana,2023-12-22,Bronze
+CUST0795,Sneha Patil,sneha.patil3@example.com,Male,36,Chennai,Tamil Nadu,2024-04-02,Bronze
+CUST0796,Karan Rao,karan.rao4@example.com,Male,32,Hyderabad,Telangana,2024-12-10,Silver
+CUST0797,Divya Mehta,divya.mehta5@example.com,Male,37,Delhi,Delhi,2025-01-07,Bronze
+CUST0798,Ananya Malhotra,ananya.malhotra6@example.com,Female,36,Ahmedabad,Gujarat,2025-01-20,Gold
+CUST0799,Sneha Khan,sneha.khan7@example.com,Female,42,Ahmedabad,Gujarat,2024-01-23,Gold
+CUST0800,Kritika Malhotra,kritika.malhotra8@example.com,Female,25,Delhi,Delhi,2025-04-28,Silver
+CUST0801,Ayesha Bose,ayesha.bose9@example.com,Female,42,Hyderabad,Telangana,2023-06-16,Gold
+CUST0802,Rohan Verma,rohan.verma10@example.com,Female,41,Pune,Maharashtra,2023-01-21,Silver
+CUST0803,Karan Nair,karan.nair11@example.com,Male,37,Delhi,Delhi,2023-12-17,Bronze
+CUST0804,Manav Malhotra,manav.malhotra12@example.com,Male,34,Bengaluru,Karnataka,2025-01-19,Platinum
+CUST0805,Kritika Patil,kritika.patil13@example.com,Female,33,Chennai,Tamil Nadu,2024-08-31,Bronze
+CUST0806,Tanvi Sharma,tanvi.sharma14@example.com,Male,33,Kolkata,West Bengal,2024-10-31,Silver
+CUST0807,Nandini Khan,nandini.khan15@example.com,Male,34,Bengaluru,Karnataka,2023-02-24,Gold
+CUST0808,Manish Rao,manish.rao16@example.com,Female,19,Hyderabad,Telangana,2024-02-24,Gold
+CUST0809,Simran Iyer,simran.iyer17@example.com,Male,57,Pune,Maharashtra,2023-09-01,Silver
+CUST0810,Ananya Malhotra,ananya.malhotra18@example.com,Female,44,Lucknow,Uttar Pradesh,2024-07-16,Silver
+CUST0811,Aditya Verma,aditya.verma19@example.com,Female,52,Chennai,Tamil Nadu,2023-01-04,Bronze
+CUST0812,Rohan Iyer,rohan.iyer20@example.com,Male,40,Lucknow,Uttar Pradesh,2024-05-06,Gold
+CUST0813,Priya Sharma,priya.sharma21@example.com,Female,27,Hyderabad,Telangana,2023-06-24,Silver
+CUST0814,Rohan Gupta,rohan.gupta22@example.com,Female,38,Delhi,Delhi,2023-11-12,Silver
+CUST0815,Kavya Gupta,kavya.gupta23@example.com,Female,42,Pune,Maharashtra,2023-04-04,Bronze
+CUST0816,Sneha Kaur,sneha.kaur24@example.com,Male,24,Kolkata,West Bengal,2024-01-14,Platinum
+CUST0817,Aryan Verma,aryan.verma25@example.com,Female,46,Pune,Maharashtra,2024-03-26,Bronze
+CUST0818,Karan Kulkarni,karan.kulkarni26@example.com,Male,29,Pune,Maharashtra,2024-07-31,Bronze
+CUST0819,Aditya Nair,aditya.nair27@example.com,Female,41,Delhi,Delhi,2024-11-15,Silver
+CUST0820,Ayesha Choudhury,ayesha.choudhury28@example.com,Male,48,Kolkata,West Bengal,2025-02-13,Bronze
+CUST0821,Kritika Verma,kritika.verma29@example.com,Female,36,Kolkata,West Bengal,2025-04-18,Bronze
+CUST0822,Kritika Gupta,kritika.gupta30@example.com,Female,48,Lucknow,Uttar Pradesh,2023-08-30,Bronze
+CUST0823,Pooja Patil,pooja.patil31@example.com,Male,19,Kolkata,West Bengal,2025-05-24,Gold
+CUST0824,Saurabh Bose,saurabh.bose32@example.com,Male,22,Jaipur,Rajasthan,2025-03-30,Bronze
+CUST0825,Priya Chopra,priya.chopra33@example.com,Male,25,Bengaluru,Karnataka,2023-06-21,Bronze
+CUST0826,Ayesha Rao,ayesha.rao34@example.com,Female,18,Bengaluru,Karnataka,2023-02-13,Silver
+CUST0827,Rohan Khan,rohan.khan35@example.com,Male,18,Hyderabad,Telangana,2025-04-22,Gold
+CUST0828,Nitin Reddy,nitin.reddy36@example.com,Male,48,Pune,Maharashtra,2023-11-24,Bronze
+CUST0829,Rohan Malhotra,rohan.malhotra37@example.com,Female,45,Jaipur,Rajasthan,2024-02-11,Silver
+CUST0830,Ishita Mehta,ishita.mehta38@example.com,Male,28,Jaipur,Rajasthan,2024-04-14,Bronze
+CUST0831,Ayesha Reddy,ayesha.reddy39@example.com,Female,56,Lucknow,Uttar Pradesh,2024-06-19,Silver
+CUST0832,Priya Khan,priya.khan40@example.com,Male,31,Bengaluru,Karnataka,2023-06-01,Bronze
+CUST0833,Palak Nair,palak.nair41@example.com,Male,52,Lucknow,Uttar Pradesh,2025-03-09,Silver
+CUST0834,Ayesha Iyer,ayesha.iyer42@example.com,Female,52,Jaipur,Rajasthan,2023-12-19,Silver
+CUST0835,Karan Malhotra,karan.malhotra43@example.com,Female,27,Ahmedabad,Gujarat,2024-08-08,Silver
+CUST0836,Ananya Joshi,ananya.joshi44@example.com,Male,42,Pune,Maharashtra,2024-02-17,Gold
+CUST0837,Nandini Reddy,nandini.reddy45@example.com,Female,45,Kolkata,West Bengal,2023-02-09,Silver
+CUST0838,Manav Roy,manav.roy46@example.com,Female,27,Hyderabad,Telangana,2023-02-20,Silver
+CUST0839,Palak Mehta,palak.mehta47@example.com,Female,18,Chennai,Tamil Nadu,2023-01-21,Gold
+CUST0840,Nitin Iyer,nitin.iyer48@example.com,Female,42,Pune,Maharashtra,2023-10-15,Bronze
+CUST0841,Ishita Nair,ishita.nair49@example.com,Female,25,Hyderabad,Telangana,2023-05-18,Bronze
+CUST0842,Rohit Chopra,rohit.chopra50@example.com,Female,32,Chennai,Tamil Nadu,2023-10-03,Bronze
+CUST0843,Nandini Patil,nandini.patil51@example.com,Male,35,Hyderabad,Telangana,2024-03-28,Silver
+CUST0844,Palak Khan,palak.khan52@example.com,Female,39,Ahmedabad,Gujarat,2025-02-16,Bronze
+CUST0845,Nitin Verma,nitin.verma53@example.com,Male,30,Jaipur,Rajasthan,2025-03-21,Silver
+CUST0846,Rohan Iyer,rohan.iyer54@example.com,Male,36,Jaipur,Rajasthan,2024-02-18,Bronze
+CUST0847,Dev Deshmukh,dev.deshmukh55@example.com,Male,45,Lucknow,Uttar Pradesh,2023-01-30,Gold
+CUST0848,Vivek Rao,vivek.rao56@example.com,Male,18,Mumbai,Maharashtra,2023-09-13,Silver
+CUST0849,Aryan Verma,aryan.verma57@example.com,Male,19,Chennai,Tamil Nadu,2024-12-22,Bronze
+CUST0850,Karan Kaur,karan.kaur58@example.com,Female,22,Ahmedabad,Gujarat,2024-06-01,Bronze
+CUST0851,Arjun Nair,arjun.nair59@example.com,Female,28,Mumbai,Maharashtra,2023-09-05,Bronze
+CUST0852,Kavya Reddy,kavya.reddy60@example.com,Female,41,Ahmedabad,Gujarat,2023-07-01,Silver
+CUST0853,Abhishek Choudhury,abhishek.choudhury61@example.com,Male,44,Chennai,Tamil Nadu,2023-12-19,Bronze
+CUST0854,Nitin Mehta,nitin.mehta62@example.com,Male,32,Delhi,Delhi,2023-10-19,Gold
+CUST0855,Rahul Verma,rahul.verma63@example.com,Male,32,Bengaluru,Karnataka,2025-05-24,Bronze
+CUST0856,Ishita Kulkarni,ishita.kulkarni64@example.com,Male,47,Hyderabad,Telangana,2024-11-24,Silver
+CUST0857,Karan Khan,karan.khan65@example.com,Male,36,Jaipur,Rajasthan,2023-01-21,Bronze
+CUST0858,Kavya Singh,kavya.singh66@example.com,Male,30,Bengaluru,Karnataka,2024-09-07,Silver
+CUST0859,Meera Mehta,meera.mehta67@example.com,Female,43,Lucknow,Uttar Pradesh,2025-04-04,Bronze
+CUST0860,Tanvi Mehta,tanvi.mehta68@example.com,Female,41,Kolkata,West Bengal,2024-01-21,Bronze
+CUST0861,Aryan Mehta,aryan.mehta69@example.com,Female,37,Hyderabad,Telangana,2024-04-22,Silver
+CUST0862,Simran Deshmukh,simran.deshmukh70@example.com,Male,28,Lucknow,Uttar Pradesh,2024-02-11,Silver
+CUST0863,Aarav Deshmukh,aarav.deshmukh71@example.com,Female,24,Chennai,Tamil Nadu,2024-07-28,Platinum
+CUST0864,Pooja Nair,pooja.nair72@example.com,Female,25,Ahmedabad,Gujarat,2023-03-07,Bronze
+CUST0865,Karan Roy,karan.roy73@example.com,Female,25,Pune,Maharashtra,2023-09-25,Gold
+CUST0866,Vivek Singh,vivek.singh74@example.com,Male,24,Jaipur,Rajasthan,2025-02-22,Gold
+CUST0867,Manav Verma,manav.verma75@example.com,Female,28,Lucknow,Uttar Pradesh,2024-02-18,Bronze
+CUST0868,Simran Singh,simran.singh76@example.com,Female,33,Mumbai,Maharashtra,2024-11-02,Bronze
+CUST0869,Pooja Mehta,pooja.mehta77@example.com,Female,35,Kolkata,West Bengal,2024-02-19,Gold
+CUST0870,Rohit Verma,rohit.verma78@example.com,Male,22,Lucknow,Uttar Pradesh,2024-12-26,Bronze
+CUST0871,Manish Kulkarni,manish.kulkarni79@example.com,Female,36,Jaipur,Rajasthan,2024-10-15,Bronze
+CUST0872,Palak Kaur,palak.kaur80@example.com,Male,34,Jaipur,Rajasthan,2023-11-04,Silver
+CUST0873,Nitin Choudhury,nitin.choudhury81@example.com,Male,32,Bengaluru,Karnataka,2023-10-28,Platinum
+CUST0874,Kavya Singh,kavya.singh82@example.com,Male,27,Pune,Maharashtra,2025-01-12,Bronze
+CUST0875,Simran Roy,simran.roy83@example.com,Female,22,Delhi,Delhi,2023-08-16,Silver
+CUST0876,Meera Iyer,meera.iyer84@example.com,Female,39,Kolkata,West Bengal,2025-03-18,Silver
+CUST0877,Divya Mehta,divya.mehta85@example.com,Female,34,Lucknow,Uttar Pradesh,2023-10-29,Silver
+CUST0878,Ishita Nair,ishita.nair86@example.com,Male,37,Ahmedabad,Gujarat,2023-02-24,Bronze
+CUST0879,Kavya Rao,kavya.rao87@example.com,Female,29,Jaipur,Rajasthan,2023-05-03,Bronze
+CUST0880,Saurabh Iyer,saurabh.iyer88@example.com,Male,28,Kolkata,West Bengal,2023-02-25,Bronze
+CUST0881,Aditya Rao,aditya.rao89@example.com,Female,44,Chennai,Tamil Nadu,2024-02-24,Gold
+CUST0882,Aditya Roy,aditya.roy90@example.com,Male,60,Bengaluru,Karnataka,2025-03-08,Bronze
+CUST0883,Kavya Roy,kavya.roy91@example.com,Male,31,Bengaluru,Karnataka,2023-11-17,Gold
+CUST0884,Aarav Chopra,aarav.chopra92@example.com,Male,35,Pune,Maharashtra,2023-08-03,Silver
+CUST0885,Abhishek Joshi,abhishek.joshi93@example.com,Male,33,Ahmedabad,Gujarat,2025-03-15,Silver
+CUST0886,Aditya Reddy,aditya.reddy94@example.com,Female,25,Kolkata,West Bengal,2024-10-10,Silver
+CUST0887,Rahul Khan,rahul.khan95@example.com,Male,29,Ahmedabad,Gujarat,2024-01-28,Bronze
+CUST0888,Ananya Choudhury,ananya.choudhury96@example.com,Female,54,Hyderabad,Telangana,2025-01-18,Bronze
+CUST0889,Aarav Roy,aarav.roy97@example.com,Male,26,Jaipur,Rajasthan,2023-07-15,Silver
+CUST0890,Simran Sharma,simran.sharma98@example.com,Female,34,Hyderabad,Telangana,2023-08-20,Silver
+CUST0891,Pooja Singh,pooja.singh0@example.com,Female,27,Delhi,Delhi,2024-01-28,Gold
+CUST0892,Sneha Patil,sneha.patil1@example.com,Female,33,Mumbai,Maharashtra,2023-11-02,Gold
+CUST0893,Aryan Deshmukh,aryan.deshmukh2@example.com,Female,26,Lucknow,Uttar Pradesh,2024-06-20,Bronze
+CUST0894,Neha Singh,neha.singh3@example.com,Female,28,Chennai,Tamil Nadu,2024-05-16,Bronze
+CUST0895,Dev Rao,dev.rao4@example.com,Female,19,Bengaluru,Karnataka,2025-04-11,Gold
+CUST0896,Aarav Kulkarni,aarav.kulkarni5@example.com,Male,34,Hyderabad,Telangana,2025-01-14,Gold
+CUST0897,Vivek Sharma,vivek.sharma6@example.com,Male,30,Lucknow,Uttar Pradesh,2024-05-31,Gold
+CUST0898,Priya Kaur,priya.kaur7@example.com,Female,39,Mumbai,Maharashtra,2024-01-20,Silver
+CUST0899,Dev Choudhury,dev.choudhury8@example.com,Male,33,Lucknow,Uttar Pradesh,2023-02-19,Platinum
+CUST0900,Simran Nair,simran.nair9@example.com,Male,26,Mumbai,Maharashtra,2023-02-19,Gold
+CUST0901,Neha Chopra,neha.chopra10@example.com,Female,24,Kolkata,West Bengal,2023-05-07,Silver
+CUST0902,Kavya Singh,kavya.singh11@example.com,Male,33,Hyderabad,Telangana,2024-12-12,Silver
+CUST0903,Pooja Khan,pooja.khan12@example.com,Female,47,Delhi,Delhi,2024-11-09,Gold
+CUST0904,Nandini Reddy,nandini.reddy13@example.com,Male,28,Bengaluru,Karnataka,2024-03-04,Platinum
+CUST0905,Saurabh Reddy,saurabh.reddy14@example.com,Male,18,Delhi,Delhi,2023-10-17,Bronze
+CUST0906,Ayesha Nair,ayesha.nair15@example.com,Male,36,Ahmedabad,Gujarat,2023-07-23,Gold
+CUST0907,Dev Mehta,dev.mehta16@example.com,Female,45,Jaipur,Rajasthan,2023-07-26,Silver
+CUST0908,Tanvi Khan,tanvi.khan17@example.com,Male,39,Pune,Maharashtra,2023-06-14,Bronze
+CUST0909,Kritika Gupta,kritika.gupta18@example.com,Female,21,Hyderabad,Telangana,2024-12-05,Gold
+CUST0910,Manish Kulkarni,manish.kulkarni19@example.com,Male,35,Mumbai,Maharashtra,2023-01-14,Silver
+CUST0911,Palak Nair,palak.nair20@example.com,Female,42,Lucknow,Uttar Pradesh,2024-11-16,Gold
+CUST0912,Aditya Patil,aditya.patil21@example.com,Male,29,Jaipur,Rajasthan,2023-03-18,Gold
+CUST0913,Manav Mehta,manav.mehta22@example.com,Female,28,Hyderabad,Telangana,2024-04-12,Bronze
+CUST0914,Karan Chopra,karan.chopra23@example.com,Male,28,Mumbai,Maharashtra,2023-04-13,Gold
+CUST0915,Ishita Verma,ishita.verma24@example.com,Female,32,Pune,Maharashtra,2024-01-04,Silver
+CUST0916,Neha Nair,neha.nair25@example.com,Male,22,Delhi,Delhi,2025-05-21,Silver
+CUST0917,Aarav Singh,aarav.singh26@example.com,Female,35,Bengaluru,Karnataka,2023-12-03,Bronze
+CUST0918,Manav Chopra,manav.chopra27@example.com,Male,36,Lucknow,Uttar Pradesh,2023-10-02,Silver
+CUST0919,Divya Roy,divya.roy28@example.com,Female,36,Bengaluru,Karnataka,2023-04-27,Platinum
+CUST0920,Rahul Chopra,rahul.chopra29@example.com,Female,33,Pune,Maharashtra,2025-05-05,Silver
+CUST0921,Tanvi Gupta,tanvi.gupta30@example.com,Male,22,Kolkata,West Bengal,2024-10-26,Silver
+CUST0922,Priya Singh,priya.singh31@example.com,Male,31,Mumbai,Maharashtra,2025-05-14,Bronze
+CUST0923,Priya Khan,priya.khan32@example.com,Female,51,Lucknow,Uttar Pradesh,2024-05-09,Silver
+CUST0924,Sneha Reddy,sneha.reddy33@example.com,Female,36,Kolkata,West Bengal,2025-03-08,Gold
+CUST0925,Nandini Sharma,nandini.sharma34@example.com,Female,25,Bengaluru,Karnataka,2024-05-09,Bronze
+CUST0926,Priya Khan,priya.khan35@example.com,Male,39,Ahmedabad,Gujarat,2023-02-17,Gold
+CUST0927,Karan Roy,karan.roy36@example.com,Male,52,Mumbai,Maharashtra,2024-12-22,Gold
+CUST0928,Simran Roy,simran.roy37@example.com,Male,37,Jaipur,Rajasthan,2024-06-19,Bronze
+CUST0929,Neha Kulkarni,neha.kulkarni38@example.com,Female,32,Ahmedabad,Gujarat,2023-12-21,Silver
+CUST0930,Aditya Choudhury,aditya.choudhury39@example.com,Male,47,Lucknow,Uttar Pradesh,2023-02-25,Bronze
+CUST0931,Arjun Joshi,arjun.joshi40@example.com,Female,29,Jaipur,Rajasthan,2025-05-19,Silver
+CUST0932,Ishita Gupta,ishita.gupta41@example.com,Female,43,Bengaluru,Karnataka,2023-03-18,Bronze
+CUST0933,Manish Kulkarni,manish.kulkarni42@example.com,Male,28,Chennai,Tamil Nadu,2023-10-12,Silver
+CUST0934,Saurabh Kulkarni,saurabh.kulkarni43@example.com,Female,29,Jaipur,Rajasthan,2024-10-20,Bronze
+CUST0935,Rahul Kulkarni,rahul.kulkarni44@example.com,Female,41,Delhi,Delhi,2024-04-15,Silver
+CUST0936,Ayesha Bose,ayesha.bose45@example.com,Female,46,Ahmedabad,Gujarat,2023-04-01,Silver
+CUST0937,Aryan Roy,aryan.roy46@example.com,Male,32,Delhi,Delhi,2024-05-24,Bronze
+CUST0938,Priya Malhotra,priya.malhotra47@example.com,Male,46,Kolkata,West Bengal,2023-02-06,Platinum
+CUST0939,Nitin Patil,nitin.patil48@example.com,Female,37,Lucknow,Uttar Pradesh,2024-09-25,Silver
+CUST0940,Manav Deshmukh,manav.deshmukh49@example.com,Female,26,Jaipur,Rajasthan,2023-07-31,Bronze
+CUST0941,Manish Kaur,manish.kaur50@example.com,Male,29,Mumbai,Maharashtra,2025-04-16,Silver
+CUST0942,Ishita Chopra,ishita.chopra51@example.com,Female,39,Chennai,Tamil Nadu,2024-07-27,Gold
+CUST0943,Tanvi Kaur,tanvi.kaur52@example.com,Male,47,Ahmedabad,Gujarat,2023-04-27,Bronze
+CUST0944,Dev Kulkarni,dev.kulkarni53@example.com,Female,44,Mumbai,Maharashtra,2023-12-16,Silver
+CUST0945,Nitin Iyer,nitin.iyer54@example.com,Female,44,Jaipur,Rajasthan,2024-06-18,Bronze
+CUST0946,Tanvi Nair,tanvi.nair55@example.com,Female,20,Mumbai,Maharashtra,2023-06-18,Platinum
+CUST0947,Aditya Khan,aditya.khan56@example.com,Male,41,Delhi,Delhi,2023-09-18,Gold
+CUST0948,Vivek Nair,vivek.nair57@example.com,Female,40,Kolkata,West Bengal,2023-08-09,Silver
+CUST0949,Nitin Rao,nitin.rao58@example.com,Female,36,Chennai,Tamil Nadu,2023-04-21,Bronze
+CUST0950,Ananya Bose,ananya.bose59@example.com,Female,40,Delhi,Delhi,2025-03-01,Silver
+CUST0951,Aryan Bose,aryan.bose60@example.com,Female,18,Jaipur,Rajasthan,2023-05-18,Bronze
+CUST0952,Aarav Deshmukh,aarav.deshmukh61@example.com,Female,18,Mumbai,Maharashtra,2024-07-20,Gold
+CUST0953,Nitin Bose,nitin.bose62@example.com,Male,36,Ahmedabad,Gujarat,2024-06-04,Silver
+CUST0954,Tanvi Bose,tanvi.bose63@example.com,Male,33,Bengaluru,Karnataka,2025-01-18,Bronze
+CUST0955,Priya Malhotra,priya.malhotra64@example.com,Female,31,Lucknow,Uttar Pradesh,2024-09-12,Bronze
+CUST0956,Saurabh Malhotra,saurabh.malhotra65@example.com,Male,38,Kolkata,West Bengal,2024-09-15,Gold
+CUST0957,Karan Malhotra,karan.malhotra66@example.com,Female,35,Chennai,Tamil Nadu,2023-10-29,Bronze
+CUST0958,Ayesha Singh,ayesha.singh67@example.com,Female,37,Bengaluru,Karnataka,2024-02-27,Gold
+CUST0959,Nitin Choudhury,nitin.choudhury68@example.com,Male,42,Chennai,Tamil Nadu,2024-12-29,Bronze
+CUST0960,Vivek Rao,vivek.rao69@example.com,Female,28,Lucknow,Uttar Pradesh,2025-01-01,Bronze
+CUST0961,Simran Kaur,simran.kaur70@example.com,Male,37,Bengaluru,Karnataka,2024-12-28,Gold
+CUST0962,Saurabh Choudhury,saurabh.choudhury71@example.com,Male,27,Chennai,Tamil Nadu,2024-12-28,Silver
+CUST0963,Dev Kaur,dev.kaur72@example.com,Female,18,Jaipur,Rajasthan,2024-05-06,Bronze
+CUST0964,Simran Choudhury,simran.choudhury73@example.com,Female,31,Pune,Maharashtra,2025-06-17,Silver
+CUST0965,Ayesha Sharma,ayesha.sharma74@example.com,Male,44,Jaipur,Rajasthan,2023-04-20,Bronze
+CUST0966,Rahul Singh,rahul.singh75@example.com,Male,25,Mumbai,Maharashtra,2024-11-17,Bronze
+CUST0967,Vivek Mehta,vivek.mehta76@example.com,Female,38,Bengaluru,Karnataka,2023-10-21,Gold
+CUST0968,Aditya Verma,aditya.verma77@example.com,Male,42,Pune,Maharashtra,2023-07-28,Silver
+CUST0969,Divya Chopra,divya.chopra78@example.com,Male,41,Delhi,Delhi,2024-09-22,Gold
+CUST0970,Rohit Choudhury,rohit.choudhury79@example.com,Female,27,Kolkata,West Bengal,2023-09-01,Bronze
+CUST0971,Tanvi Verma,tanvi.verma80@example.com,Female,26,Kolkata,West Bengal,2024-02-01,Silver
+CUST0972,Ayesha Roy,ayesha.roy81@example.com,Male,34,Jaipur,Rajasthan,2023-02-25,Gold
+CUST0973,Rohit Mehta,rohit.mehta82@example.com,Female,36,Hyderabad,Telangana,2024-09-27,Silver
+CUST0974,Nitin Kulkarni,nitin.kulkarni83@example.com,Male,40,Chennai,Tamil Nadu,2025-02-12,Gold
+CUST0975,Dev Rao,dev.rao84@example.com,Male,40,Pune,Maharashtra,2024-04-04,Gold
+CUST0976,Simran Patil,simran.patil85@example.com,Male,60,Bengaluru,Karnataka,2023-06-27,Bronze
+CUST0977,Rahul Verma,rahul.verma86@example.com,Female,48,Kolkata,West Bengal,2023-10-13,Bronze
+CUST0978,Aditya Joshi,aditya.joshi87@example.com,Female,30,Lucknow,Uttar Pradesh,2025-05-16,Silver
+CUST0979,Aarav Roy,aarav.roy88@example.com,Male,55,Ahmedabad,Gujarat,2024-12-27,Gold
+CUST0980,Ananya Singh,ananya.singh89@example.com,Male,22,Chennai,Tamil Nadu,2024-09-03,Silver
+CUST0981,Dev Reddy,dev.reddy90@example.com,Female,23,Pune,Maharashtra,2024-05-17,Silver
+CUST0982,Rohan Roy,rohan.roy91@example.com,Male,41,Jaipur,Rajasthan,2023-08-14,Silver
+CUST0983,Saurabh Patil,saurabh.patil92@example.com,Female,31,Jaipur,Rajasthan,2023-06-13,Bronze
+CUST0984,Kritika Choudhury,kritika.choudhury93@example.com,Female,18,Kolkata,West Bengal,2023-04-05,Silver
+CUST0985,Meera Rao,meera.rao94@example.com,Female,48,Chennai,Tamil Nadu,2023-12-06,Platinum
+CUST0986,Pooja Rao,pooja.rao95@example.com,Female,40,Lucknow,Uttar Pradesh,2024-06-27,Silver
+CUST0987,Kritika Sharma,kritika.sharma96@example.com,Female,32,Delhi,Delhi,2024-11-15,Silver
+CUST0988,Aryan Kulkarni,aryan.kulkarni97@example.com,Male,32,Lucknow,Uttar Pradesh,2024-09-28,Bronze
+CUST0989,Ananya Roy,ananya.roy98@example.com,Male,31,Kolkata,West Bengal,2025-03-26,Silver
+CUST0990,Rahul Mehta,rahul.mehta0@example.com,Female,18,Jaipur,Rajasthan,2025-01-11,Bronze
+CUST0991,Aarav Deshmukh,aarav.deshmukh1@example.com,Female,25,Chennai,Tamil Nadu,2024-06-10,Silver
+CUST0992,Kavya Verma,kavya.verma2@example.com,Male,27,Pune,Maharashtra,2024-10-29,Silver
+CUST0993,Manish Deshmukh,manish.deshmukh3@example.com,Male,44,Delhi,Delhi,2023-04-09,Bronze
+CUST0994,Dev Choudhury,dev.choudhury4@example.com,Male,28,Jaipur,Rajasthan,2023-01-08,Silver
+CUST0995,Vivek Rao,vivek.rao5@example.com,Male,37,Kolkata,West Bengal,2025-05-05,Silver
+CUST0996,Vivek Choudhury,vivek.choudhury6@example.com,Male,32,Kolkata,West Bengal,2024-10-24,Bronze
+CUST0997,Rohit Singh,rohit.singh7@example.com,Female,25,Mumbai,Maharashtra,2024-04-15,Bronze
+CUST0998,Ananya Patil,ananya.patil8@example.com,Male,36,Delhi,Delhi,2023-02-25,Bronze
+CUST0999,Ayesha Mehta,ayesha.mehta9@example.com,Male,33,Jaipur,Rajasthan,2023-03-14,Silver
+CUST1000,Palak Mehta,palak.mehta10@example.com,Female,44,Kolkata,West Bengal,2024-02-02,Silver

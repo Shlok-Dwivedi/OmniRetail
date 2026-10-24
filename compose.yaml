@@ -1,0 +1,10 @@
+services:
+  omniretail:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - retail-workspace:/app/data/workspace
+    restart: unless-stopped
+volumes:
+  retail-workspace:
