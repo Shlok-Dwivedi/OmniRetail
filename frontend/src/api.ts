@@ -26,7 +26,8 @@ export function useResource<T>(path: string, revision = '') {
   const [attempt, setAttempt] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
-    setState({ data: null, loading: true, error: '' });
+    // Keep the previous result on screen while the next one loads, so filters never flash.
+    setState((previous) => ({ data: previous.data, loading: true, error: '' }));
     request<T>(path, { signal: controller.signal })
       .then((data) => setState({ data, loading: false, error: '' }))
       .catch((error) => {

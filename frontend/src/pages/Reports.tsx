@@ -1,16 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 import {
-  CheckCircle2,
-  FileChartColumn,
+  CircleCheck,
+  Download,
   FileSpreadsheet,
-  Globe2,
+  FileText,
+  FileUp,
+  Globe,
   RefreshCw,
-  UploadCloud,
 } from 'lucide-react';
 import { download, request } from '../api';
-import { fullDate, number, useWorkspace } from '../context';
+import { dateRange, number, percent, useWorkspace } from '../context';
 import type { Currency } from '../types';
-import { ExportButton, PageTitle, Panel } from '../components/UI';
+import { ExportButton, PageTitle, Panel, Spinner } from '../components/UI';
 interface ImportJob {
   id: string;
   status: string;
@@ -93,81 +94,79 @@ export default function Reports() {
     }
   }
   const audit = meta.audit;
+  const retained = audit.clean_rows / Math.max(1, audit.raw_rows);
   const importing = busy || job?.status === 'processing';
   return (
     <>
       <PageTitle
-        eyebrow="YOUR DATA, WORKING FOR YOU"
         title="Data & reports"
-        description="Bring your data together. Take your insights with you."
+        caption={`${meta.name} · ${number(audit.clean_rows)} validated rows · ${dateRange(audit.start, audit.end)}`}
       />
-      <div className="report-downloads">
-        <section className="download-feature">
-          <span className="report-icon">
-            <FileSpreadsheet size={26} />
-          </span>
+      <div className="report-grid">
+        <section className="panel report-feature">
+          <FileSpreadsheet size={34} strokeWidth={1.5} className="report-icon" />
           <div>
-            <span className="eyebrow">READY TO SHARE</span>
-            <h2>The complete business report.</h2>
+            <h2>Business report</h2>
             <p>
               Sales, markets, products, customer profiles and data quality in one Excel workbook,
-              with ready-made charts.
+              with charts ready to share.
             </p>
-            <ExportButton
-              path={`/export/workbook?${query}`}
-              filename="OmniRetail-report.xlsx"
-              primary
-            >
-              Download Excel report
-            </ExportButton>
             <small>
-              Sales sheets follow your overview filters. Customer profiles cover all history. All
+              Sales sheets follow the Overview filters. Customer profiles cover all history. All
               values in GBP.
             </small>
           </div>
+          <ExportButton
+            path={`/export/workbook?${query}`}
+            filename="OmniRetail-report.xlsx"
+            primary
+          >
+            Download Excel report
+          </ExportButton>
         </section>
-        <Panel title="Take a closer look" subtitle="Download the detail behind your dashboard">
-          <div className="export-list">
-            <div>
-              <span>
-                <FileChartColumn size={20} />
-                Sales transactions<small>Current overview selection · GBP</small>
-              </span>
-              <ExportButton
-                path={`/export/transactions?${query}`}
-                filename="OmniRetail-transactions.csv"
-              >
-                CSV
-              </ExportButton>
-            </div>
-            <div>
-              <span>
-                <FileChartColumn size={20} />
-                Customer profiles<small>All history · all segments</small>
-              </span>
-              <ExportButton path="/export/customers" filename="OmniRetail-customers.csv">
-                CSV
-              </ExportButton>
-            </div>
-            <div>
-              <span>
-                <FileChartColumn size={20} />
-                Demand outlook<small>Next 30 days · forecast & range</small>
-              </span>
-              <ExportButton path="/export/forecast?horizon=30" filename="OmniRetail-forecast.csv">
-                CSV
-              </ExportButton>
-            </div>
-          </div>
+        <Panel title="Detailed exports" subtitle="The CSV files behind the dashboard">
+          <ul className="export-list">
+            {[
+              {
+                label: 'Sales transactions',
+                detail: 'Current Overview selection · GBP',
+                path: `/export/transactions?${query}`,
+                filename: 'OmniRetail-transactions.csv',
+              },
+              {
+                label: 'Customer profiles',
+                detail: 'All history · all segments',
+                path: '/export/customers',
+                filename: 'OmniRetail-customers.csv',
+              },
+              {
+                label: 'Demand forecast',
+                detail: 'Next 30 days with the 95% interval',
+                path: '/export/forecast?horizon=30',
+                filename: 'OmniRetail-forecast.csv',
+              },
+            ].map((item) => (
+              <li key={item.label}>
+                <FileText size={20} strokeWidth={1.7} />
+                <span>
+                  {item.label}
+                  <small>{item.detail}</small>
+                </span>
+                <ExportButton path={item.path} filename={item.filename} compact>
+                  CSV
+                </ExportButton>
+              </li>
+            ))}
+          </ul>
         </Panel>
       </div>
       <div className="two-columns">
         <Panel
-          title="A healthy foundation"
+          title="Data quality"
           subtitle={meta.name}
           action={
-            <span className="subtle-badge">
-              <CheckCircle2 size={14} />
+            <span className="status-tag">
+              <CircleCheck size={14} />
               Validated
             </span>
           }
@@ -175,14 +174,13 @@ export default function Reports() {
           <div className="quality-top">
             <strong>{number(audit.clean_rows)}</strong>
             <span>clean product transactions</span>
-            <div className="quality-meter">
-              <i style={{ width: `${(audit.clean_rows / audit.raw_rows) * 100}%` }} />
-            </div>
-            <p>
-              {((audit.clean_rows / audit.raw_rows) * 100).toFixed(1)}% of {number(audit.raw_rows)}{' '}
-              source rows retained
-            </p>
           </div>
+          <div className="meter" aria-hidden="true">
+            <i style={{ width: `${retained * 100}%` }} />
+          </div>
+          <p className="meter-caption">
+            {percent(retained)} of {number(audit.raw_rows)} source rows retained
+          </p>
           <dl className="quality-list">
             {[
               ['Duplicate rows removed', audit.duplicate_rows],
@@ -197,18 +195,17 @@ export default function Reports() {
               </div>
             ))}
           </dl>
-          <div className="panel-footnote">
-            {fullDate(audit.start)} — {fullDate(audit.end)} · {meta.countries.length} markets
-            <br />
-            Guest sales count toward revenue; customer analysis includes identified purchasers only.
-          </div>
+          <p className="panel-footnote">
+            {dateRange(audit.start, audit.end)} · {number(meta.countries.length)} markets. Guest
+            sales count toward revenue; customer analysis includes identified purchasers only.
+          </p>
         </Panel>
         <Panel
-          title="Bring your own sales"
-          subtitle="Create a new analysis from your transaction history"
+          title="Import sales data"
+          subtitle="Replace the active dataset with your own transactions"
         >
           <div
-            className={`drop-zone ${drag ? 'dragging' : ''}`}
+            className={`drop-zone ${drag ? 'dragging' : ''} ${file ? 'has-file' : ''}`}
             onDragOver={(e) => {
               e.preventDefault();
               setDrag(true);
@@ -220,15 +217,15 @@ export default function Reports() {
               if (!importing) choose(e.dataTransfer.files[0] || null);
             }}
           >
-            <UploadCloud size={30} />
-            <strong>{file ? file.name : 'A fresh perspective starts with your data.'}</strong>
+            <FileUp size={30} strokeWidth={1.5} />
+            <strong>{file ? file.name : 'Drop a sales file here'}</strong>
             <p>
               {file
                 ? `${(file.size / 1024 / 1024).toFixed(2)} MB · ready to import`
-                : 'Drop your sales file here, or choose one below.'}
+                : 'CSV, Excel, JSON or XML, up to 40 MB'}
             </p>
             <button className="button" disabled={importing} onClick={() => input.current?.click()}>
-              Choose a file
+              {file ? 'Choose another file' : 'Choose a file'}
             </button>
             <input
               ref={input}
@@ -238,15 +235,14 @@ export default function Reports() {
               accept=".csv,.txt,.xlsx,.json,.xml"
               onChange={(e) => choose(e.target.files?.[0] || null)}
             />
-            <small>CSV, Excel, JSON or XML · up to 40 MB</small>
           </div>
           {file && (
             <button
-              className="button button-primary import-button"
+              className="button button-primary button-large import-button"
               disabled={importing || job?.status === 'complete'}
               onClick={() => void upload()}
             >
-              {importing ? <span className="loader small" /> : <UploadCloud size={16} />}{' '}
+              {importing && <Spinner size={15} />}
               {importing
                 ? 'Validating your sales…'
                 : job?.status === 'complete'
@@ -260,8 +256,8 @@ export default function Reports() {
             </p>
           )}
           <p className="upload-note">
-            Importing replaces the active analysis after validation. Your original files stay
-            available on disk.
+            Importing replaces the active analysis after validation. Your original files stay on
+            disk.
           </p>
           <button
             className="text-button"
@@ -271,7 +267,8 @@ export default function Reports() {
               )
             }
           >
-            Download a sample format →
+            <Download size={15} />
+            Download a sample file
           </button>
           <details className="import-help">
             <summary>What should my file contain?</summary>
@@ -289,12 +286,9 @@ export default function Reports() {
           </details>
         </Panel>
       </div>
-      <Panel
-        title="One currency, a consistent view"
-        subtitle="Original transaction amounts are in British pounds."
-        action={<Globe2 size={20} className="muted" />}
-      >
-        <div className="currency-panel">
+      <Panel title="Display currency" subtitle="Transactions are recorded in British pounds.">
+        <div className="currency-row">
+          <Globe size={20} strokeWidth={1.7} />
           <div>
             <strong>
               {meta.currency.status === 'original'
@@ -303,12 +297,12 @@ export default function Reports() {
             </strong>
             <p>
               {meta.currency.status === 'original'
-                ? 'Load historical exchange rates to view your dashboard in USD or INR.'
-                : `${meta.currency.source}. Display rates are from the dataset’s closing date; exports preserve original GBP amounts.`}
+                ? 'Load historical exchange rates to view the dashboard in USD or INR.'
+                : `${meta.currency.source}. Display rates come from the dataset’s closing date; exports keep the original GBP amounts.`}
             </p>
           </div>
           <button className="button" disabled={fxBusy} onClick={() => void rates()}>
-            <RefreshCw size={16} className={fxBusy ? 'spinning' : ''} />
+            {fxBusy ? <Spinner size={14} /> : <RefreshCw size={15} />}
             {fxBusy
               ? 'Loading rates…'
               : meta.currency.status === 'original'

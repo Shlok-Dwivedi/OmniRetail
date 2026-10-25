@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import { useState } from 'react';
-import { AlertCircle, ArrowDownToLine, ArrowUpRight, RefreshCw } from 'lucide-react';
+import { ArrowDownToLine, CircleAlert, Info, RotateCw, SearchX, TriangleAlert } from 'lucide-react';
 import { download } from '../api';
 import { useWorkspace } from '../context';
 export function Panel({
@@ -11,7 +11,7 @@ export function Panel({
   className = '',
 }: {
   title?: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   action?: ReactNode;
   children: ReactNode;
   className?: string;
@@ -32,70 +32,86 @@ export function Panel({
   );
 }
 export function PageTitle({
-  eyebrow,
   title,
-  description,
+  caption,
   action,
 }: {
-  eyebrow: string;
   title: string;
-  description: string;
+  caption?: ReactNode;
   action?: ReactNode;
 }) {
   return (
     <div className="page-title">
       <div>
-        <div className="eyebrow">{eyebrow}</div>
         <h1>{title}</h1>
-        <p>{description}</p>
+        {caption && <p>{caption}</p>}
       </div>
-      {action}
+      {action && <div className="page-actions">{action}</div>}
     </div>
   );
 }
-export function Stat({
+// The figure a view leads with. Charts rewrite it in place while the pointer scrubs them.
+export function Readout({
   label,
   value,
   detail,
-  accent,
-  tone,
-  children,
+  live = false,
 }: {
-  label: string;
+  label: ReactNode;
   value: string;
-  detail?: string;
-  accent?: boolean;
-  tone?: 'mint' | 'blue' | 'violet' | 'amber';
-  children?: ReactNode;
+  detail?: ReactNode;
+  live?: boolean;
 }) {
   return (
-    <div className={`stat ${accent ? 'stat-accent' : ''} ${tone ? `stat-${tone}` : ''}`}>
-      <div className="stat-top">
-        <span>{label}</span>
-        <ArrowUpRight size={17} />
-      </div>
+    <div className={`stat stat-accent ${live ? 'is-scrubbing' : ''}`}>
+      <span className="stat-label">{label}</span>
       <strong>{value}</strong>
-      <div className="stat-detail">{children || detail}</div>
+      {detail && <span className="stat-detail">{detail}</span>}
     </div>
   );
 }
-export function Loading({ label = 'Preparing your workspace…' }: { label?: string }) {
+export function KeyStats({ items }: { items: [string, ReactNode][] }) {
+  return (
+    <dl className="key-stats">
+      {items.map(([label, value]) => (
+        <div key={label}>
+          <dt>{label}</dt>
+          <dd>{value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+export function Spinner({ size = 16 }: { size?: number }) {
+  return (
+    <span className="spinner" style={{ width: size, height: size }} aria-hidden="true">
+      {Array.from({ length: 8 }, (_, i) => (
+        <i key={i} style={{ '--i': i } as CSSProperties} />
+      ))}
+    </span>
+  );
+}
+export function Loading({ label = 'Loading…', rows = 3 }: { label?: string; rows?: number }) {
   return (
     <div className="loading" role="status">
-      <span className="loader" />
-      <span>{label}</span>
+      <span className="sr-only">{label}</span>
+      <span className="skeleton skeleton-heading" />
+      {Array.from({ length: rows }, (_, i) => (
+        <span key={i} className="skeleton skeleton-line" />
+      ))}
+      <span className="skeleton skeleton-block" />
     </div>
   );
 }
 export function ErrorState({ message, retry }: { message: string; retry?: () => void }) {
   return (
-    <div className="error-state" role="alert">
-      <AlertCircle size={26} />
-      <h3>We couldn’t load this view</h3>
+    <div className="unavailable error-state" role="alert">
+      <CircleAlert size={32} strokeWidth={1.6} />
+      <h3>This view couldn’t load</h3>
       <p>{message}</p>
       {retry && (
         <button className="button" onClick={retry}>
-          <RefreshCw size={16} />
+          <RotateCw size={15} />
           Try again
         </button>
       )}
@@ -103,16 +119,36 @@ export function ErrorState({ message, retry }: { message: string; retry?: () => 
   );
 }
 export function Empty({
-  title = 'No results for this selection',
-  detail = 'Try a different date range or market.',
+  title = 'No sales in this selection',
+  detail = 'Widen the date range or choose All markets.',
 }: {
   title?: string;
   detail?: string;
 }) {
   return (
-    <div className="empty">
+    <div className="unavailable empty">
+      <SearchX size={30} strokeWidth={1.6} />
       <h3>{title}</h3>
       <p>{detail}</p>
+    </div>
+  );
+}
+export function Notice({
+  tone = 'info',
+  title,
+  children,
+}: {
+  tone?: 'info' | 'warning';
+  title: string;
+  children?: ReactNode;
+}) {
+  return (
+    <div className={`notice notice-${tone}`}>
+      {tone === 'warning' ? <TriangleAlert size={18} /> : <Info size={18} />}
+      <div>
+        <strong>{title}</strong>
+        {children && <p>{children}</p>}
+      </div>
     </div>
   );
 }
@@ -121,17 +157,19 @@ export function ExportButton({
   filename,
   children = 'Export report',
   primary = false,
+  compact = false,
 }: {
   path: string;
   filename: string;
   children?: ReactNode;
   primary?: boolean;
+  compact?: boolean;
 }) {
   const [busy, setBusy] = useState(false);
   const { notify } = useWorkspace();
   return (
     <button
-      className={`button ${primary ? 'button-primary' : ''}`}
+      className={`button ${primary ? 'button-primary' : ''} ${compact ? 'button-capsule' : ''}`}
       disabled={busy}
       onClick={async () => {
         setBusy(true);
@@ -145,17 +183,8 @@ export function ExportButton({
         }
       }}
     >
-      {busy ? <span className="loader small" /> : <ArrowDownToLine size={16} />}{' '}
+      {busy ? <Spinner size={14} /> : !compact && <ArrowDownToLine size={16} />}
       {busy ? 'Preparing…' : children}
     </button>
   );
 }
-export const tooltipStyle = {
-  background: '#202923',
-  border: '1px solid #3a473f',
-  borderRadius: 10,
-  color: '#edf1ec',
-  fontSize: 13,
-  padding: '12px 16px',
-};
-export const axisStyle = { fontSize: 11, fill: '#8a978f' };
