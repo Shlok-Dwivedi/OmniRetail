@@ -1,8 +1,8 @@
 import { useSyncExternalStore } from 'react';
 
-// Chart colours mirror the --blue/--orange/... tokens in styles.css. Light uses Apple's system
-// colours; dark steps the same hues into a lightness band that keeps every adjacent pair
-// distinguishable for protanopes and deuteranopes on the #1c1c1e card surface.
+// Colours for chart marks (blue matches --blue in styles.css). Light uses Apple's system colours;
+// dark steps the same hues into a lightness band that keeps every adjacent pair distinguishable
+// for protanopes and deuteranopes on the #1c1c1e card surface.
 export interface Palette {
   blue: string;
   orange: string;
