@@ -33,4 +33,18 @@ export const fullDate = (value: string) =>
     month: 'short',
     year: 'numeric',
   });
-export const COLORS = ['#88b9ed', '#a7d9b4', '#b8a5e8', '#e0bd82', '#d99b93', '#8dbdc7', '#acb4c5'];
+export const dayDate = (value: string) =>
+  new Date(value.slice(0, 10) + 'T12:00:00').toLocaleDateString('en-GB', {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+export const monthDate = (value: string) =>
+  new Date(value.slice(0, 7) + '-15T12:00:00').toLocaleDateString('en-GB', {
+    month: 'long',
+    year: 'numeric',
+  });
+export const dateRange = (start: string, end: string) => `${fullDate(start)} – ${fullDate(end)}`;
+export const percent = (value: number, digits = 1) =>
+  `${(Number.isFinite(value) ? value * 100 : 0).toFixed(digits)}%`;

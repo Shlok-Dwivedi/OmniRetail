@@ -188,7 +188,7 @@ Local storage: SQLite + Parquet + JSON metadata
 
 ### Frontend
 
-The interface uses **React, TypeScript, and Vite**, with **Recharts** for charts. A responsive top navbar connects five views:
+The interface uses **React, TypeScript, and Vite**, with **Recharts** for charts. A sidebar, which becomes a bottom tab bar on phones, connects five views, and the interface follows the system's light or dark appearance:
 
 - **Overview:** sales, orders, customers, market contribution, and best-selling products.
 - **Customers:** segmentation, search, buying behavior, and spending estimates.

@@ -1,52 +1,50 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import {
   Area,
   CartesianGrid,
   ComposedChart,
   Line,
+  ReferenceLine,
   ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from 'recharts';
-import { CalendarClock, Info } from 'lucide-react';
+import { CalendarClock } from 'lucide-react';
 import { useResource } from '../api';
 import type { Forecast as ForecastData } from '../types';
-import { fullDate } from '../context';
-import { shortDate, useWorkspace } from '../context';
+import { dateRange, dayDate, fullDate, shortDate, useWorkspace } from '../context';
+import { usePalette, useReducedMotion } from '../theme';
 import {
-  axisStyle,
   ErrorState,
   ExportButton,
+  KeyStats,
   Loading,
+  Notice,
   PageTitle,
-  Panel,
-  Stat,
-  tooltipStyle,
+  Readout,
 } from '../components/UI';
+import Segmented from '../components/Segmented';
+import { axisProps, Legend, ScrubReporter, TableView } from '../components/charts';
+interface Point {
+  date: string;
+  actual?: number;
+  average?: number;
+  forecast?: number;
+  range?: [number, number];
+}
 export default function Forecast() {
-  const { meta, money } = useWorkspace();
+  const { meta } = useWorkspace();
   const [horizon, setHorizon] = useState(30);
   const { data, loading, error, retry } = useResource<ForecastData>(
     `/forecast?horizon=${horizon}`,
     meta.version,
   );
-  const points = data
-    ? [
-        ...data.history.map((p) => ({ date: p.date, actual: p.RevenueGBP, average: p.SMA_7 })),
-        ...data.forecast.map((p) => ({
-          date: p.date,
-          forecast: p.PredictedRevenueGBP,
-          range: [p.LowerBoundGBP, p.UpperBoundGBP],
-        })),
-      ]
-    : [];
   return (
     <>
       <PageTitle
-        eyebrow="MAKE ROOM FOR WHAT’S NEXT"
         title="Demand forecast"
-        description="Understand future demand, with uncertainty in view."
+        caption={`ARIMA(1, 1, 1) · counted from the last observed sale on ${fullDate(meta.audit.end)}`}
         action={
           <ExportButton
             path={`/export/forecast?horizon=${horizon}`}
@@ -56,142 +54,37 @@ export default function Forecast() {
           </ExportButton>
         }
       />
-      <div className="forecast-toolbar">
-        <span>
-          <CalendarClock size={18} />
+      <div className="filter-bar">
+        <span className="filter-label">
+          <CalendarClock size={16} />
           Planning horizon
         </span>
-        <div className="period-buttons">
-          {[7, 14, 30, 60, 90].map((d) => (
-            <button
-              key={d}
-              className={horizon === d ? 'selected' : ''}
-              onClick={() => setHorizon(d)}
-            >
-              {d} days
-            </button>
-          ))}
-        </div>
-        <span className="muted">From the last observed sale</span>
+        <Segmented
+          label="Planning horizon"
+          value={horizon}
+          onChange={setHorizon}
+          options={[7, 14, 30, 60, 90].map((d) => ({ value: d, label: `${d} days` }))}
+        />
       </div>
-      {loading ? (
-        <Loading label="Building your demand outlook…" />
-      ) : error || !data ? (
+      {error ? (
         <ErrorState message={error} retry={retry} />
+      ) : !data ? (
+        <Loading label="Building the forecast…" />
       ) : (
-        <>
-          <div className="stats-grid">
-            <Stat
-              label={`Next ${horizon} days`}
-              value={money(data.total)}
-              detail="Estimated total sales"
-              accent
-            />
-            <Stat
-              tone="blue"
-              label="Daily outlook"
-              value={money(data.total / horizon)}
-              detail="Average expected daily sales"
-            />
-            <Stat
-              tone="violet"
-              label="Historical forecast error"
-              value={money(data.rmse)}
-              detail="Held-out daily revenue · RMSE"
-            />
-            <Stat
-              tone="amber"
-              label="Seasonal baseline error"
-              value={money(data.baseline_rmse)}
-              detail="Repeating the last observed week"
-            />
-          </div>
-          <Panel
-            title="Your demand outlook"
-            subtitle={`${fullDate(data.forecast[0].date)} — ${fullDate(data.forecast[data.forecast.length - 1].date)}`}
-            action={<span className="subtle-badge">95% model interval</span>}
-          >
-            <div className="forecast-legend">
-              <span>
-                <i style={{ background: '#78897e' }} />
-                Observed sales
-              </span>
-              <span>
-                <i style={{ background: '#88b9ed' }} />
-                7-day average
-              </span>
-              <span>
-                <i style={{ background: '#b8a5e8' }} />
-                Forecast
-              </span>
-              <span>
-                <i className="range-swatch" />
-                Possible range
-              </span>
-            </div>
-            <div className="chart tall-chart">
-              <ResponsiveContainer width="100%" height="100%">
-                <ComposedChart data={points} margin={{ top: 20, right: 25, left: 5, bottom: 5 }}>
-                  <CartesianGrid stroke="#29332c" vertical={false} strokeDasharray="3 5" />
-                  <XAxis
-                    dataKey="date"
-                    tickFormatter={shortDate}
-                    minTickGap={55}
-                    tick={axisStyle}
-                    axisLine={false}
-                    tickLine={false}
-                  />
-                  <YAxis
-                    tickFormatter={(v) => money(v, true)}
-                    width={75}
-                    tick={axisStyle}
-                    axisLine={false}
-                    tickLine={false}
-                  />
-                  <Tooltip
-                    contentStyle={tooltipStyle}
-                    labelFormatter={(v) => fullDate(String(v))}
-                    formatter={(v, n) => [
-                      Array.isArray(v)
-                        ? v.map((x) => money(Number(x))).join(' – ')
-                        : money(Number(v)),
-                      n === 'actual'
-                        ? 'Observed sales'
-                        : n === 'average'
-                          ? '7-day average'
-                          : n === 'range'
-                            ? '95% interval'
-                            : 'Forecast',
-                    ]}
-                  />
-                  <Area dataKey="range" stroke="none" fill="#b8a5e8" fillOpacity={0.15} />
-                  <Line dataKey="actual" stroke="#78897e" dot={false} strokeWidth={1.4} />
-                  <Line dataKey="average" stroke="#88b9ed" dot={false} strokeWidth={2} />
-                  <Line
-                    dataKey="forecast"
-                    stroke="#b8a5e8"
-                    strokeDasharray="6 4"
-                    dot={false}
-                    strokeWidth={2.5}
-                  />
-                </ComposedChart>
-              </ResponsiveContainer>
-            </div>
-          </Panel>
-          <div className="info-banner">
-            <Info size={20} />
-            <div>
-              <strong>Plan for a range of outcomes.</strong>
-              <p>
-                The shaded area shows the model’s 95% interval. The forecast uses historical
-                purchases, so it cannot anticipate promotions, stockouts, or changes in your
-                business.
-                {data.rmse > data.baseline_rmse
-                  ? ' The simple weekly baseline performed better on the holdout; use this forecast cautiously.'
-                  : ''}
-              </p>
-            </div>
-          </div>
+        <div className={`stack ${loading ? 'refreshing' : ''}`} aria-busy={loading}>
+          <Outlook data={data} />
+          {data.rmse > data.baseline_rmse && (
+            <Notice tone="warning" title="The seasonal baseline beat this model on the holdout.">
+              Repeating the last observed week had a{' '}
+              {((1 - data.baseline_rmse / data.rmse) * 100).toFixed(0)}% lower error. Use this
+              forecast with caution.
+            </Notice>
+          )}
+          <Notice title="Plan for a range of outcomes.">
+            The shaded band is the model’s 95% interval. The forecast learns only from past
+            purchases, so it can’t anticipate promotions, stockouts or other changes in the
+            business.
+          </Notice>
           {data.warnings.map((w) => (
             <p key={w} className="form-error">
               {w}
@@ -216,8 +109,161 @@ export default function Forecast() {
               . Sales and interval bounds are clipped to zero.
             </p>
           </details>
-        </>
+        </div>
       )}
     </>
+  );
+}
+function Outlook({ data }: { data: ForecastData }) {
+  const { money } = useWorkspace();
+  const palette = usePalette();
+  const still = useReducedMotion();
+  const [active, setActive] = useState<string | null>(null);
+  const points = useMemo<Point[]>(
+    () => [
+      ...data.history.map((p) => ({ date: p.date, actual: p.RevenueGBP, average: p.SMA_7 })),
+      ...data.forecast.map((p) => ({
+        date: p.date,
+        forecast: p.PredictedRevenueGBP,
+        range: [p.LowerBoundGBP, p.UpperBoundGBP] as [number, number],
+      })),
+    ],
+    [data],
+  );
+  const point = active ? points.find((p) => p.date === active) : undefined;
+  const first = data.forecast[0];
+  const finalDay = data.forecast[data.forecast.length - 1];
+  const chart = useMemo(
+    () => (
+      <ResponsiveContainer width="100%" height="100%">
+        <ComposedChart
+          data={points}
+          margin={{ top: 8, right: 0, bottom: 0, left: 0 }}
+          title="Observed daily sales and forecast with 95% interval"
+        >
+          <CartesianGrid stroke={palette.grid} vertical={false} />
+          <XAxis
+            dataKey="date"
+            tickFormatter={shortDate}
+            minTickGap={56}
+            dy={8}
+            {...axisProps(palette)}
+          />
+          <YAxis
+            orientation="right"
+            tickFormatter={(v) => money(v, true)}
+            width={64}
+            {...axisProps(palette)}
+          />
+          <Tooltip
+            content={() => null}
+            cursor={{ stroke: palette.label, strokeOpacity: 0.28 }}
+            isAnimationActive={false}
+          />
+          {first && (
+            <ReferenceLine
+              x={first.date}
+              stroke={palette.axis}
+              strokeOpacity={0.5}
+              ifOverflow="extendDomain"
+              label={{
+                value: `Forecast · ${shortDate(first.date)}`,
+                position: 'insideTopLeft',
+                fill: palette.axis,
+                fontSize: 12,
+              }}
+            />
+          )}
+          <Area
+            dataKey="range"
+            stroke="none"
+            fill={palette.orange}
+            fillOpacity={0.16}
+            activeDot={false}
+            isAnimationActive={!still}
+          />
+          <Line
+            dataKey="actual"
+            stroke={palette.blue}
+            strokeOpacity={0.5}
+            strokeWidth={1.25}
+            dot={false}
+            activeDot={false}
+            isAnimationActive={!still}
+          />
+          <Line
+            dataKey="average"
+            stroke={palette.blue}
+            strokeWidth={2}
+            strokeLinecap="round"
+            dot={false}
+            activeDot={{ r: 5, fill: palette.blue, stroke: palette.surface, strokeWidth: 2 }}
+            isAnimationActive={!still}
+          />
+          <Line
+            dataKey="forecast"
+            stroke={palette.orange}
+            strokeWidth={2}
+            strokeDasharray="5 4"
+            strokeLinecap="round"
+            dot={false}
+            activeDot={{ r: 5, fill: palette.orange, stroke: palette.surface, strokeWidth: 2 }}
+            isAnimationActive={!still}
+          />
+          <ScrubReporter onChange={setActive} />
+        </ComposedChart>
+      </ResponsiveContainer>
+    ),
+    [first, money, palette, points, still],
+  );
+  const scrubbingForecast = point?.forecast !== undefined && point.actual === undefined;
+  return (
+    <section className="panel revenue-panel">
+      <div className="readout-row">
+        <Readout
+          live={!!point}
+          label={point ? dayDate(point.date) : `Next ${data.horizon} days`}
+          value={money(
+            point ? ((scrubbingForecast ? point.forecast : point.actual) ?? 0) : data.total,
+          )}
+          detail={
+            !point
+              ? first && finalDay
+                ? `Estimated total sales · ${dateRange(first.date, finalDay.date)}`
+                : 'Estimated total sales'
+              : scrubbingForecast && point.range
+                ? `Forecast · 95% interval ${money(point.range[0])} – ${money(point.range[1])}`
+                : `Observed sales · ${money(point.average ?? 0)} 7-day average`
+          }
+        />
+        <Legend
+          items={[
+            { label: 'Daily sales', color: `${palette.blue}80`, kind: 'line' },
+            { label: '7-day average', color: palette.blue, kind: 'line' },
+            { label: 'Forecast', color: palette.orange, kind: 'dash' },
+            { label: '95% interval', color: palette.orange, kind: 'band' },
+          ]}
+        />
+      </div>
+      <div className="chart forecast-chart">{chart}</div>
+      <KeyStats
+        items={[
+          ['Average per day', money(data.total / Math.max(1, data.horizon))],
+          ['Model error (RMSE)', money(data.rmse)],
+          ['Baseline error (RMSE)', money(data.baseline_rmse)],
+          ['Daily error (MAPE)', data.mape === null ? '—' : `${data.mape.toFixed(1)}%`],
+        ]}
+      />
+      <TableView
+        summary="Daily forecast"
+        head={['Date', 'Forecast', 'Low (95%)', 'High (95%)']}
+        rows={data.forecast.map((p) => [
+          fullDate(p.date),
+          money(p.PredictedRevenueGBP),
+          money(p.LowerBoundGBP),
+          money(p.UpperBoundGBP),
+        ])}
+      />
+    </section>
   );
 }

@@ -2,7 +2,7 @@
 
 ## Architecture
 
-React 19 + TypeScript + Vite provide five routed, lazy-loaded views. Recharts handles interactive charts; Lucide supplies consistent icons. Fonts are bundled locally. A shared workspace context contains current dataset metadata, currency and overview filters. Typed request helpers use AbortController cancellation to prevent old responses replacing new filters. Loading, empty, validation and recoverable-error states are explicit.
+React 19 + TypeScript + Vite provide five routed, lazy-loaded views. Recharts handles interactive charts; Lucide supplies consistent icons. Fonts are bundled locally. A shared workspace context contains current dataset metadata, currency and overview filters. Typed request helpers use AbortController cancellation to prevent old responses replacing new filters; while a new selection loads, the previous result stays on screen, dimmed, instead of flashing a loading state. Loading, empty, validation and recoverable-error states are explicit.
 
 FastAPI exposes a thin HTTP boundary over ingestion, analytics, storage, reports and currency services. CPU/dataframe work runs in synchronous routes on the framework thread pool. Long imports use one background executor per process, a bounded job registry and polling. ARIMA results are serialized and cached per dataset version/horizon. Models and customer profiles are computed once per immutable Analytics instance. The production Python process serves the compiled frontend, so there is one origin and one start command.
 

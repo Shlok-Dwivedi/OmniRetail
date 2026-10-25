@@ -1,12 +1,12 @@
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight, Globe2, Package, TrendingUp } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUp, CalendarDays, Globe, RotateCcw } from 'lucide-react';
 import {
   Area,
-  AreaChart,
+  Bar,
   CartesianGrid,
-  Cell,
-  Pie,
-  PieChart,
+  ComposedChart,
+  Line,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -14,21 +14,36 @@ import {
 } from 'recharts';
 import { useResource } from '../api';
 import type { Overview as OverviewData } from '../types';
-import { COLORS, fullDate, number, shortDate, useWorkspace } from '../context';
 import {
-  axisStyle,
+  dateRange,
+  dayDate,
+  fullDate,
+  monthDate,
+  number,
+  percent,
+  shortDate,
+  useWorkspace,
+} from '../context';
+import { usePalette, useReducedMotion } from '../theme';
+import {
   Empty,
   ErrorState,
   ExportButton,
+  KeyStats,
   Loading,
   PageTitle,
   Panel,
-  Stat,
-  tooltipStyle,
+  Readout,
 } from '../components/UI';
+import { axisProps, Legend, ScrubReporter, TableView } from '../components/charts';
 import Filters from '../components/Filters';
+const productName = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/\s+,/g, ',')
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 export default function Overview() {
-  const { meta, money, query, start, end } = useWorkspace();
+  const { meta, query, start, end } = useWorkspace();
   const { data, loading, error, retry } = useResource<OverviewData>(
     `/overview?${query}`,
     meta.version,
@@ -36,283 +51,306 @@ export default function Overview() {
   return (
     <>
       <PageTitle
-        eyebrow="YOUR BUSINESS, AT A GLANCE"
         title="Sales performance"
-        description="Track revenue, customer activity, and the products driving your sales."
+        caption={`${meta.name} · ${dateRange(start || meta.audit.start, end || meta.audit.end)}`}
         action={
           <ExportButton path={`/export/workbook?${query}`} filename="OmniRetail-report.xlsx" />
         }
       />
       <Filters />
-      {loading ? (
-        <Loading label="Bringing your sales into focus…" />
-      ) : error || !data ? (
+      {error ? (
         <ErrorState message={error} retry={retry} />
+      ) : !data ? (
+        <Loading label="Loading sales…" />
       ) : (
-        <>
-          <div className="stats-grid">
-            <Stat label="Sales revenue" value={money(data.revenue)} accent>
-              <span className="stat-pill">
-                {data.change === null
-                  ? 'Completed sales'
-                  : `${data.change > 0 ? '+' : ''}${data.change}% vs prior period`}
-              </span>
-            </Stat>
-            <Stat
-              tone="blue"
-              label="Completed orders"
-              value={number(data.orders)}
-              detail={`${number(data.units)} items sold`}
-            />
-            <Stat
-              tone="violet"
-              label="Active customers"
-              value={number(data.customers)}
-              detail="Identified customers in this period"
-            />
-            <Stat
-              tone="amber"
-              label="Average order value"
-              value={money(data.aov)}
-              detail="Revenue per completed order"
-            />
+        <div className={`stack ${loading ? 'refreshing' : ''}`} aria-busy={loading}>
+          <Revenue data={data} />
+          <div className="overview-grid">
+            <Markets data={data} />
+            <Products data={data} />
           </div>
-          <div className="overview-charts">
-            <Panel
-              title="Revenue performance"
-              subtitle={`${fullDate(start || meta.audit.start)} — ${fullDate(end || meta.audit.end)}`}
-              action={
-                <span className="chart-legend">
-                  <i />
-                  Sales <i className="line-dot" />
-                  7-day average
-                </span>
-              }
-            >
-              {!data.daily.length ? (
-                <Empty />
-              ) : (
-                <>
-                  <div className="chart-summary">
-                    <strong>{money(data.revenue)}</strong>
-                    <span>across {number(data.orders)} orders</span>
-                  </div>
-                  <div className="chart revenue-chart">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <AreaChart
-                        data={data.daily}
-                        margin={{ top: 15, right: 12, left: 0, bottom: 0 }}
-                      >
-                        <defs>
-                          <linearGradient id="revenue-fill" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#88b9ed" stopOpacity={0.2} />
-                            <stop offset="100%" stopColor="#88b9ed" stopOpacity={0} />
-                          </linearGradient>
-                        </defs>
-                        <CartesianGrid stroke="#2b342e" vertical={false} strokeDasharray="3 5" />
-                        <XAxis
-                          dataKey="date"
-                          tickFormatter={shortDate}
-                          minTickGap={48}
-                          tick={axisStyle}
-                          axisLine={false}
-                          tickLine={false}
-                          dy={10}
-                        />
-                        <YAxis
-                          tickFormatter={(v) => money(v, true)}
-                          width={65}
-                          tick={axisStyle}
-                          axisLine={false}
-                          tickLine={false}
-                        />
-                        <Tooltip
-                          contentStyle={tooltipStyle}
-                          labelFormatter={(v) => fullDate(String(v))}
-                          formatter={(v, name) => [
-                            money(Number(v)),
-                            name === 'revenue' ? 'Sales' : '7-day average',
-                          ]}
-                        />
-                        <Area
-                          type="monotone"
-                          dataKey="revenue"
-                          stroke="#88b9ed"
-                          strokeWidth={1.5}
-                          fill="url(#revenue-fill)"
-                          animationDuration={700}
-                        />
-                        <Area
-                          type="monotone"
-                          dataKey="average"
-                          stroke="#a7d9b4"
-                          strokeWidth={2.2}
-                          fill="transparent"
-                          animationDuration={900}
-                        />
-                      </AreaChart>
-                    </ResponsiveContainer>
-                  </div>
-                </>
-              )}
-            </Panel>
-            <Panel
-              title="Your markets"
-              subtitle="Where your revenue comes from"
-              action={<Globe2 size={18} className="muted" />}
-            >
-              {!data.markets.length ? (
-                <Empty />
-              ) : (
-                <>
-                  <div className="donut-wrap">
-                    <ResponsiveContainer width="100%" height={210}>
-                      <PieChart>
-                        <Pie
-                          data={[
-                            ...data.markets.slice(0, 4),
-                            ...(data.markets.length > 4
-                              ? [
-                                  {
-                                    country: 'Other markets',
-                                    revenue: data.markets
-                                      .slice(4)
-                                      .reduce((s, v) => s + v.revenue, 0),
-                                  },
-                                ]
-                              : []),
-                          ]}
-                          dataKey="revenue"
-                          nameKey="country"
-                          innerRadius={70}
-                          outerRadius={91}
-                          paddingAngle={3}
-                          stroke="none"
-                          cornerRadius={4}
-                        >
-                          {COLORS.map((c, i) => (
-                            <Cell key={i} fill={c} />
-                          ))}
-                        </Pie>
-                        <Tooltip contentStyle={tooltipStyle} formatter={(v) => money(Number(v))} />
-                      </PieChart>
-                    </ResponsiveContainer>
-                    <div className="donut-center">
-                      <strong>{data.markets.length}</strong>
-                      <span>markets</span>
-                    </div>
-                  </div>
-                  <div className="market-legend">
-                    {data.markets.slice(0, 4).map((m, i) => (
-                      <div key={m.country}>
-                        <span>
-                          <i style={{ background: COLORS[i] }} />
-                          {m.country}
-                        </span>
-                        <strong>{((m.revenue / data.revenue) * 100).toFixed(1)}%</strong>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </Panel>
-          </div>
-          <div className="overview-bottom">
-            <Panel
-              title="Products leading the way"
-              subtitle="Your best sellers, ranked by sales revenue"
-              action={<Package size={18} className="muted" />}
-            >
-              {!data.products.length ? (
-                <Empty />
-              ) : (
-                <div className="table-scroll">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Product</th>
-                        <th>Units sold</th>
-                        <th>Revenue</th>
-                        <th>Share</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {data.products.slice(0, 5).map((p, i) => (
-                        <tr key={p.code + p.name}>
-                          <td>
-                            <span className="product-cell">
-                              <span className="product-number">
-                                {String(i + 1).padStart(2, '0')}
-                              </span>
-                              <span>
-                                {p.name.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase())}
-                                <small>{p.code}</small>
-                              </span>
-                            </span>
-                          </td>
-                          <td>{number(p.units)}</td>
-                          <td className="table-strong">{money(p.revenue)}</td>
-                          <td>
-                            <span className="share-bar">
-                              <i
-                                style={{
-                                  width: `${Math.min(100, (p.revenue / data.revenue) * 1000)}%`,
-                                }}
-                              />
-                            </span>
-                            <span className="muted">
-                              {((p.revenue / data.revenue) * 100).toFixed(1)}%
-                            </span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-            </Panel>
-            <section className="insight-card">
-              <span className="insight-icon">
-                <TrendingUp size={22} />
-              </span>
-              <div className="eyebrow">THE BIGGER PICTURE</div>
-              <h2>
-                Plan your next
-                <br />
-                move with clarity.
-              </h2>
-              <p>
-                {data.markets[0]
-                  ? `${data.markets[0].country} accounts for ${((data.markets[0].revenue / Math.max(1, data.revenue)) * 100).toFixed(0)}% of sales. Explore upcoming demand to plan with confidence.`
-                  : 'Explore upcoming demand and plan your next move.'}
-              </p>
-              <Link to="/forecast">
-                Explore your forecast <ArrowUpRight size={17} />
-              </Link>
-              <div className="insight-decoration" aria-hidden="true">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-              </div>
-            </section>
-          </div>
-          <div className="sales-note">
-            <span>
-              Sales exclude cancellations. Refunds: <strong>{money(data.refunds)}</strong>
-              <span className="footer-dot">·</span>Net revenue:{' '}
-              <strong>{money(data.net_revenue)}</strong>
-            </span>
+          <Highlights data={data} />
+          <p className="page-note">
+            Sales exclude cancellations; refunds are reported separately.{' '}
             <Link to="/reports">
-              View data quality <ArrowRight size={14} />
+              Data quality <ArrowRight size={13} />
             </Link>
-          </div>
-        </>
+          </p>
+        </div>
       )}
     </>
+  );
+}
+function Revenue({ data }: { data: OverviewData }) {
+  const { money } = useWorkspace();
+  const palette = usePalette();
+  const still = useReducedMotion();
+  const [active, setActive] = useState<string | null>(null);
+  const day = active ? data.daily.find((d) => d.date === active) : undefined;
+  const dense = data.daily.length > 120;
+  const chart = useMemo(
+    () => (
+      <ResponsiveContainer width="100%" height="100%">
+        <ComposedChart
+          data={data.daily}
+          margin={{ top: 8, right: 0, bottom: 0, left: 0 }}
+          title="Daily sales with a 7-day average"
+        >
+          <CartesianGrid stroke={palette.grid} vertical={false} />
+          <XAxis
+            dataKey="date"
+            tickFormatter={shortDate}
+            minTickGap={56}
+            dy={8}
+            {...axisProps(palette)}
+          />
+          <YAxis
+            orientation="right"
+            tickFormatter={(v) => money(v, true)}
+            width={64}
+            {...axisProps(palette)}
+          />
+          <Tooltip
+            content={() => null}
+            cursor={{ stroke: palette.label, strokeOpacity: 0.28 }}
+            isAnimationActive={false}
+          />
+          {dense ? (
+            <Area
+              dataKey="revenue"
+              type="monotone"
+              stroke={palette.blue}
+              strokeOpacity={0.45}
+              strokeWidth={1}
+              fill={palette.blue}
+              fillOpacity={0.1}
+              activeDot={false}
+              isAnimationActive={!still}
+              animationDuration={500}
+            />
+          ) : (
+            <Bar
+              dataKey="revenue"
+              fill={palette.blue}
+              fillOpacity={0.32}
+              radius={[4, 4, 0, 0]}
+              maxBarSize={24}
+              isAnimationActive={!still}
+              animationDuration={500}
+            />
+          )}
+          <Line
+            dataKey="average"
+            type="monotone"
+            stroke={palette.blue}
+            strokeWidth={2}
+            strokeLinecap="round"
+            dot={false}
+            activeDot={{ r: 5, fill: palette.blue, stroke: palette.surface, strokeWidth: 2 }}
+            isAnimationActive={!still}
+            animationDuration={700}
+          />
+          <ScrubReporter onChange={setActive} />
+        </ComposedChart>
+      </ResponsiveContainer>
+    ),
+    [data.daily, dense, money, palette, still],
+  );
+  const months = useMemo(() => {
+    const totals = new Map<string, { revenue: number; orders: number }>();
+    for (const d of data.daily) {
+      const month = totals.get(d.date.slice(0, 7)) ?? { revenue: 0, orders: 0 };
+      month.revenue += d.revenue;
+      month.orders += d.orders;
+      totals.set(d.date.slice(0, 7), month);
+    }
+    return [...totals];
+  }, [data.daily]);
+  const change =
+    data.change === null ? null : (
+      <span className={`delta ${data.change >= 0 ? 'delta-up' : 'delta-down'}`}>
+        {data.change >= 0 ? <ArrowUp size={13} /> : <ArrowDown size={13} />}
+        {Math.abs(data.change)}% vs previous period
+      </span>
+    );
+  return (
+    <section className="panel revenue-panel">
+      <div className="readout-row">
+        <Readout
+          live={!!day}
+          label={day ? dayDate(day.date) : 'Revenue'}
+          value={money(day ? day.revenue : data.revenue)}
+          detail={
+            day ? (
+              `${money(day.average)} 7-day average · ${number(day.orders)} orders`
+            ) : (
+              <>
+                {change}
+                {change && ' · '}
+                {number(data.orders)} completed orders
+              </>
+            )
+          }
+        />
+        <Legend
+          items={[
+            { label: 'Daily sales', color: palette.blue, kind: dense ? 'band' : 'bar' },
+            { label: '7-day average', color: palette.blue, kind: 'line' },
+          ]}
+        />
+      </div>
+      {!data.daily.length ? <Empty /> : <div className="chart revenue-chart">{chart}</div>}
+      <KeyStats
+        items={[
+          ['Orders', number(data.orders)],
+          ['Items sold', number(data.units)],
+          ['Customers', number(data.customers)],
+          ['Average order', money(data.aov)],
+          ['Refunds', money(data.refunds)],
+          ['Net revenue', money(data.net_revenue)],
+        ]}
+      />
+      {months.length > 0 && (
+        <TableView
+          summary="Monthly totals"
+          head={['Month', 'Orders', 'Revenue']}
+          rows={months.map(([month, m]) => [monthDate(month), number(m.orders), money(m.revenue)])}
+        />
+      )}
+    </section>
+  );
+}
+function Markets({ data }: { data: OverviewData }) {
+  const { money } = useWorkspace();
+  const palette = usePalette();
+  const rest = data.markets.slice(5);
+  const rows = [
+    ...data.markets.slice(0, 5).map((m) => ({ name: m.country, revenue: m.revenue, other: false })),
+    ...(rest.length
+      ? [
+          {
+            name: `${rest.length} other ${rest.length === 1 ? 'market' : 'markets'}`,
+            revenue: rest.reduce((sum, m) => sum + m.revenue, 0),
+            other: true,
+          },
+        ]
+      : []),
+  ];
+  const total = Math.max(1, data.revenue);
+  return (
+    <Panel
+      title="Markets"
+      subtitle={`Share of revenue across ${number(data.markets.length)} ${data.markets.length === 1 ? 'market' : 'markets'}`}
+    >
+      {!rows.length ? (
+        <Empty />
+      ) : (
+        <ul className="bar-list">
+          {rows.map((r) => (
+            <li key={r.name}>
+              <span className="bar-list-name">{r.name}</span>
+              <span className="bar-list-bar" aria-hidden="true">
+                <i
+                  style={{
+                    width: `${Math.min(100, (r.revenue / total) * 100)}%`,
+                    background: r.other ? palette.gray : palette.blue,
+                  }}
+                />
+              </span>
+              <span className="bar-list-value">{percent(r.revenue / data.revenue)}</span>
+              <span className="bar-list-detail">{money(r.revenue, true)}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </Panel>
+  );
+}
+function Products({ data }: { data: OverviewData }) {
+  const { money } = useWorkspace();
+  return (
+    <Panel title="Top products" subtitle="Best sellers by revenue">
+      {!data.products.length ? (
+        <Empty />
+      ) : (
+        <div className="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th className="num hide-sm">Units sold</th>
+                <th className="num">Revenue</th>
+                <th className="num">Share</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.products.slice(0, 5).map((p, i) => (
+                <tr key={p.code + p.name}>
+                  <td>
+                    <span className="product-cell">
+                      <span className="rank">{i + 1}</span>
+                      <span>
+                        {productName(p.name)}
+                        <small>{p.code}</small>
+                      </span>
+                    </span>
+                  </td>
+                  <td className="num hide-sm">{number(p.units)}</td>
+                  <td className="num strong">{money(p.revenue)}</td>
+                  <td className="num">{percent(p.revenue / data.revenue)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </Panel>
+  );
+}
+function Highlights({ data }: { data: OverviewData }) {
+  const { money, country } = useWorkspace();
+  const trading = data.daily.filter((d) => d.orders > 0);
+  if (!trading.length || !data.revenue) return null;
+  const leader = data.markets[0];
+  const busiest = trading.reduce((best, d) => (d.revenue > best.revenue ? d : best));
+  const typical = trading.reduce((sum, d) => sum + d.revenue, 0) / trading.length;
+  const items = [
+    !country &&
+      leader && {
+        icon: Globe,
+        key: 'markets',
+        title: `${leader.country} brings in ${percent(leader.revenue / data.revenue, 0)} of revenue.`,
+        detail: `${money(leader.revenue)} from ${number(leader.orders)} orders.`,
+      },
+    {
+      icon: CalendarDays,
+      key: 'busiest',
+      title: `${fullDate(busiest.date)} was the busiest day.`,
+      detail: `${money(busiest.revenue)} in sales, ${(busiest.revenue / typical).toFixed(1)}× an average trading day.`,
+    },
+    {
+      icon: RotateCcw,
+      key: 'refunds',
+      title: `Refunds came to ${percent(data.refunds / data.revenue)} of sales.`,
+      detail: `${money(data.refunds)} refunded, leaving ${money(data.net_revenue)} in net revenue.`,
+    },
+  ].filter((item) => !!item);
+  return (
+    <section className="highlights" aria-labelledby="highlights-title">
+      <h2 id="highlights-title" className="section-title">
+        Highlights
+      </h2>
+      <ul className="panel highlight-list">
+        {items.map(({ icon: Icon, key, title, detail }) => (
+          <li key={key}>
+            <Icon size={20} strokeWidth={1.8} />
+            <div>
+              <strong>{title}</strong>
+              <p>{detail}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
